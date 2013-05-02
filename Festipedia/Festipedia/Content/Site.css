@@ -2,7 +2,7 @@
     background-color: #e2e2e2;
     margin: 0;
     padding: 0;
-    
+    height:100%;
 }
 
 body {
@@ -12,7 +12,13 @@ body {
     font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
     margin: 0;
     padding: 0;
-    
+    height:100%;
+}
+
+#wrapper {
+	min-height:100%;
+	position:relative;
+    background-color:#efeeef;
 }
 
 a {
@@ -132,6 +138,10 @@ footer {
     color:#1bca00;
     margin-bottom:0px;
     border-top:5px solid #1bca00;
+    position:absolute;
+    bottom:0px;
+    width:100%;
+
 }
 
 
