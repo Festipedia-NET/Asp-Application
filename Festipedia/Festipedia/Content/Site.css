@@ -643,3 +643,23 @@ tr.pager td {
 .featured {
     padding-bottom:10px;
 }
+
+#footer-menu {
+    
+    border-right:1px solid #1bca00;
+    border-left:1px solid #1bca00;
+    list-style:none;
+    padding-right:30px;
+}
+
+#footer-menu li a {
+    font-size:18px;
+    color:#1bca00;
+    text-decoration:none;
+}
+
+#footer-tekst {
+    font-size:16px;
+    margin-left:20px;
+    padding-top:20px;
+}

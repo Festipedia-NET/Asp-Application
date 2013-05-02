@@ -62,16 +62,27 @@
     </div>
     <footer>
         <div class="content-wrapper">
+            
             <div class="float-left">
-                <p>&copy; <%: DateTime.Now.Year %> - FestiPedia</p>
+                <ul id="footer-menu">
+                    <li><a id="A1" runat="server" href="~/" >Home</a></li>
+                    <li><a id="A2" runat="server" href="~/" >Bands</a></li>
+                    <li><a id="A3" runat="server" href="~/" >Festivals</a></li>
+                                
+                </ul>
             </div>
+
+            <div class="float-left">
+                <p id="footer-tekst">&copy; <%: DateTime.Now.Year %> - FestiPedia</p>
+            </div>
+
               <div class="float-right">
                 <section id="login">
                     <asp:LoginView ID="LoginView1" runat="server" ViewStateMode="Disabled">
                         <AnonymousTemplate>
                             <ul>
-                                
-                                <li><a id="loginLink" runat="server" href="~/Account/Login.aspx" class="login">Admin Log in</a></li>
+                                <li><a id="regLink" runat="server" href="~/Account/Register.aspx" class="login">Register</a></li>
+                                <li><a id="loginLink" runat="server" href="~/Account/Login.aspx" class="login">Log in</a></li>
                             </ul>
                         </AnonymousTemplate>
                         <LoggedInTemplate>
