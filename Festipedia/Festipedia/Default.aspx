@@ -15,7 +15,7 @@
 
        <asp:ListView ID="upcomingFestivals"
                      runat="server"
-                     ItemsSource="{Binding Path=Festival}">
+                     DataSource="getFestivals">
 
             <LayoutTemplate>
                 <li>
@@ -24,13 +24,15 @@
             </LayoutTemplate>
 
             <ItemTemplate>
-                {Binding Path=ProductID}
+                
             </ItemTemplate>
-        
+           
            <EmptyDataTemplate>
                     Error, Data could not be loaded
            </EmptyDataTemplate>
        </asp:ListView>
+
+       <asp:SqlDataSource ID="getFestivals" runat="server" ></asp:SqlDataSource>
 
        
 
