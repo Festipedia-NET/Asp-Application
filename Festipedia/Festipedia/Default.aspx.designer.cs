@@ -7,11 +7,27 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Festipedia
-{
-
-
-    public partial class _Default
-    {
+namespace Festipedia {
+    
+    
+    public partial class _Default {
+        
+        /// <summary>
+        /// upcomingFestivals control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ListView upcomingFestivals;
+        
+        /// <summary>
+        /// upFestivals control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource upFestivals;
     }
 }
