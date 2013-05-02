@@ -15,7 +15,7 @@
 
        <asp:ListView ID="upcomingFestivals"
                      runat="server"
-                     DataSourceID="upFestivals">
+                     ItemsSource="{Binding Path=Festival}">
 
             <LayoutTemplate>
                 <li>
@@ -24,7 +24,7 @@
             </LayoutTemplate>
 
             <ItemTemplate>
-                 <%# Eval("fest_naam") %>
+                {Binding Path=ProductID}
             </ItemTemplate>
         
            <EmptyDataTemplate>
@@ -32,13 +32,7 @@
            </EmptyDataTemplate>
        </asp:ListView>
 
-       <asp:SqlDataSource ID="upFestivals"
-                          runat="server"
-                          ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" 
-                          SelectCommand="SELECT * FROM [Festivals]"
-                          >
-
-       </asp:SqlDataSource>
+       
 
    </ul>
 </asp:Content>
