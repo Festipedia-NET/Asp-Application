@@ -676,11 +676,11 @@ tr.pager td {
     margin-top:40px;
 }
 
-#languages a{
-}
-
-#languages {
-    text-align: center;
+#languages { 
+    position:relative;
+    top: -150px;
+    margin-left: 700px;
+    text-align: right;
 }
 
 #be, #uk {
