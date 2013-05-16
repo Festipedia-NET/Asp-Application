@@ -11,15 +11,11 @@
 <asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
     <h3>Upcoming Festivals:</h3>
    
-   <ul>
-
-       <asp:ListView ID="upcomingFestivals"
-                     runat="server"
-                     DataSource="getFestivals">
-
+    <ul>
+        <asp:ListView ID="upcomingFestivals" runat="server">
             <LayoutTemplate>
                 <li>
-                <asp:PlaceHolder ID="itemPlaceholder" runat="server" />
+                    <asp:PlaceHolder ID="itemPlaceholder" runat="server" />
                 </li>
             </LayoutTemplate>
 
@@ -27,14 +23,9 @@
                 
             </ItemTemplate>
            
-           <EmptyDataTemplate>
+            <EmptyDataTemplate>
                     Error, Data could not be loaded
-           </EmptyDataTemplate>
-       </asp:ListView>
-
-       <asp:SqlDataSource ID="getFestivals" runat="server" ></asp:SqlDataSource>
-
-       
-
-   </ul>
+            </EmptyDataTemplate>
+        </asp:ListView>      
+    </ul>
 </asp:Content>
