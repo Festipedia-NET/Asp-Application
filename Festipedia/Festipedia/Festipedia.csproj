@@ -297,29 +297,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Band.cs" />
-    <Compile Include="Models\BandsPerFestival.cs" />
-    <Compile Include="Models\Camping.cs" />
-    <Compile Include="Models\Faciliteiten.cs" />
-    <Compile Include="Models\FacPerCamp.cs" />
-    <Compile Include="Models\Festival.cs" />
-    <Compile Include="Models\GeregistreerdeGebruiker.cs" />
-    <Compile Include="Models\groep15_festivalsContext.cs" />
-    <Compile Include="Models\Mapping\BandMap.cs" />
-    <Compile Include="Models\Mapping\BandsPerFestivalMap.cs" />
-    <Compile Include="Models\Mapping\CampingMap.cs" />
-    <Compile Include="Models\Mapping\FaciliteitenMap.cs" />
-    <Compile Include="Models\Mapping\FacPerCampMap.cs" />
-    <Compile Include="Models\Mapping\FestivalMap.cs" />
-    <Compile Include="Models\Mapping\GeregistreerdeGebruikerMap.cs" />
-    <Compile Include="Models\Mapping\PodiaMap.cs" />
-    <Compile Include="Models\Mapping\TicketMap.cs" />
-    <Compile Include="Models\Mapping\TickettypeMap.cs" />
-    <Compile Include="Models\Mapping\TickettypesPerFestivalMap.cs" />
-    <Compile Include="Models\Podia.cs" />
-    <Compile Include="Models\Ticket.cs" />
-    <Compile Include="Models\Tickettype.cs" />
-    <Compile Include="Models\TickettypesPerFestival.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>

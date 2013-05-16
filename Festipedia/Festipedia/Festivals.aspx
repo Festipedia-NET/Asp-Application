@@ -5,8 +5,6 @@
         <h1><%: Title %>.</h1>
         <h2>Find all the information.</h2>
     </hgroup>
-    <asp:EntityDataSource ID="Test" runat="server">
-
-    </asp:EntityDataSource>
+    
 
 </asp:Content>
