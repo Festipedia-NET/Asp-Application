@@ -97,12 +97,14 @@ h5, h6 {
 ----------------------------------------------------------*/
 .content-wrapper {
     margin: 0 auto;
-    max-width: 960px;
+    width: 880px;
+    min-width: 880px;
 }
 
 #body {
     background-color: #efeeef;
     clear: both;
+    min-width:960px;
     padding-bottom: 120px;
 }
 
@@ -123,7 +125,9 @@ header {
     background-color: #333;
     border-bottom: 5px solid #1bca00; 
     height:165px;
-    max-height:165px;
+    max-height:165px;   
+    min-width:960px;
+
 }
     
 footer {
@@ -136,8 +140,8 @@ footer {
     border-top:5px solid #1bca00;
     position:absolute;
     bottom:0px;
-    width:100%;
-
+    width: 100%;
+    min-width:960px;
 }
 
 
@@ -673,14 +677,13 @@ tr.pager td {
 }
 
 #languages a{
-    font-size:16px;
-    text-align:center;
-    color:#1bca00 !important;
 }
 
 #languages {
-    position: absolute;
-    right: 10px;
-    top: 70px;
-    text-align:center;
+    text-align: center;
 }
+
+#be, #uk {
+    width: 40px;
+}
+
