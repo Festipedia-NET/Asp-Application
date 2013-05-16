@@ -31,6 +31,15 @@ namespace Festipedia {
         protected global::System.Web.UI.WebControls.LinkButton btnSetDutch;
         
         /// <summary>
+        /// be control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image be;
+        
+        /// <summary>
         /// btnSetEnglish control.
         /// </summary>
         /// <remarks>
@@ -38,6 +47,15 @@ namespace Festipedia {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.LinkButton btnSetEnglish;
+        
+        /// <summary>
+        /// en control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image en;
         
         /// <summary>
         /// FeaturedContent control.

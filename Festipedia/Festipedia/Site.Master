@@ -54,11 +54,13 @@
             </div>
         </div>
         <p id="languages">
-            <asp:LinkButton ID="btnSetDutch" runat="server" Text="Dutch"
+            <asp:LinkButton ID="btnSetDutch" runat="server" 
                 CommandArgument="nl-be" OnClick="RequestLanguageChange_Click">
+                <asp:Image ID="be" runat="server" ImageUrl="~/Images/be-ico.png" />
             </asp:LinkButton>  
-            <asp:LinkButton ID="btnSetEnglish" runat="server" Text="English"
+            <asp:LinkButton ID="btnSetEnglish" runat="server"
                 CommandArgument="en-GB" OnClick="RequestLanguageChange_Click">
+                <asp:Image ID="en" runat="server" ImageUrl="~/Images/en-ico.png" />
             </asp:LinkButton>
         </p>
     </header>
