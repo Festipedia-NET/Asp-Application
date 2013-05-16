@@ -4,7 +4,7 @@
 <html lang="en">
 <head runat="server">
     <meta charset="utf-8" />
-    <title><%: Page.Title %> - My ASP.NET Application</title>
+    <title>FestiPedia | <%: Page.Title %></title>
     <asp:PlaceHolder runat="server">     
           <%: Scripts.Render("~/bundles/modernizr") %>
     </asp:PlaceHolder>  
@@ -47,8 +47,8 @@
                 <nav>
                     <ul id="menu">
                         <li><a runat="server" href="~/">Home</a></li>
-                        <li><a runat="server" href="~/About.aspx">Bands</a></li>
-                        <li><a runat="server" href="~/Contact.aspx">Festivals</a></li>
+                        <li><a runat="server" href="~/Bands.aspx">Bands</a></li>
+                        <li><a runat="server" href="~/Festivals.aspx">Festivals</a></li>
                     </ul>
                 </nav>
             </div>
