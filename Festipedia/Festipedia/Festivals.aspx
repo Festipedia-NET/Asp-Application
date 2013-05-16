@@ -8,9 +8,12 @@
     </section>
 </asp:Content>
 <asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
-    <hgroup class="title">
-        
-    </hgroup>    
-    <asp:GridView ID="festView" runat="server">
-    </asp:GridView>
+        <asp:GridView ID="festView" runat="server" AutoGenerateColumns="false">
+            <Columns>
+                <asp:BoundField DataField="fest_naam" HeaderText="Festival" />
+                <asp:BoundField DataField="fest_locatie" HeaderText="Locatie" />
+                <asp:BoundField DataField="fest_datum" HeaderText="Datum"  DataFormatString="{0:d}"/>
+                <asp:BoundField DataField="fest_duur" HeaderText="Duur" />
+            </Columns>
+        </asp:GridView>  
 </asp:Content>

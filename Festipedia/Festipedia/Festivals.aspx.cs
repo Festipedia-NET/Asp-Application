@@ -14,9 +14,9 @@ namespace Festipedia
         {
             using (var db = new groep15_festivalsContext())
             {
-                var query = from f in db.Festivals orderby f.fest_datum select f.fest_naam;
+                var query = from f in db.Festivals orderby f.fest_datum select f;
                 festView.DataSource = query.ToList();
-                festView.DataBind();
+                festView.DataBind();                
             }
         }
     }
