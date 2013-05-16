@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Festipedia.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,7 +12,12 @@ namespace Festipedia
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            using (var db = new groep15_festivalsContext())
+            {
+                var query = from f in db.Festivals orderby f.fest_datum select f.fest_naam;
+                festView.DataSource = query.ToList();
+                festView.DataBind();
+            }
         }
     }
 }
