@@ -638,11 +638,44 @@ tr.pager td {
   
     margin:0px;
     padding: 0px;
-   color:black;
+    color:black;
 }
 
 .featured {
     padding-bottom:10px;
+}
+
+.festview, .bandview
+{
+    width: 800px;
+    margin: auto;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.festview td, .bandview td{
+    padding-left: 15px;
+}
+
+.festview td:last-child{
+    text-align:center;
+}
+
+.bandview td:last-child {
+    width: 200px;
+}
+
+.festview tbody tr:nth-child(even) td, .bandview tbody tr:nth-child(even) td
+{
+    background-color: #CCCCCC;
+}
+
+.festview th, .bandview th
+{
+    font-size: 14px;
+    font-weight: bold;
+    padding-left: 15px;
+    padding-bottom: 5px;
 }
 
 #footer-menu {
