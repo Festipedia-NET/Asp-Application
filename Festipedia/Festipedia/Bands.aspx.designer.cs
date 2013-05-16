@@ -7,11 +7,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Festipedia
-{
-
-    public partial class About
-    {
-
+namespace Festipedia {
+    
+    
+    public partial class Bands {
     }
 }

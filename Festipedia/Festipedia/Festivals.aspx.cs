@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace Festipedia
 {
-    public partial class Contact : Page
+    public partial class Festivals : Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

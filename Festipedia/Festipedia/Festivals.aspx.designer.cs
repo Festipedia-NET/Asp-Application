@@ -7,9 +7,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Festipedia
-{
-    public partial class Contact
-    {
+namespace Festipedia {
+    
+    
+    public partial class Festivals {
     }
 }
