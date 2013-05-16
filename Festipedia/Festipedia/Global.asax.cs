@@ -29,5 +29,11 @@ namespace Festipedia
             // Code that runs when an unhandled error occurs
 
         }
+
+        void Session_Start(object sender, EventArgs e)
+        {
+            //set english as default startup language
+            Session["MyCulture"] = "nl-be";
+        }
     }
 }
