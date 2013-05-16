@@ -9,12 +9,16 @@
                 Font-Size="10pt" Cellpadding="4"
                 HeaderStyle-BackColor="#444444"
                 HeaderStyle-ForeColor="White"
-                AlternatingRowStyle-BackColor="#dddddd">
+                AlternatingRowStyle-BackColor="#dddddd"
+                AutoGenerateColumns="false">
                 <Columns>
                     <asp:BoundField DataField="gebr_id" HeaderText="ID" />
                     <asp:BoundField DataField="gebr_naam" HeaderText="Naam" />
                     <asp:BoundField DataField="gebr_adres" HeaderText="Adres" />
                     <asp:BoundField DataField="gebr_gebDat" HeaderText="Datum"  DataFormatString="{0:d}"/>
+                    <asp:BoundField DataField="gebr_email" HeaderText="Email" />
+                    <asp:BoundField DataField="gebr_wachtwoord" HeaderText="Wachtwoord" />
+                    <asp:BoundField DataField="gebr_bevoegdheid" HeaderText="Bevoegdheid" />
                 </Columns>
             </asp:GridView>
                 
