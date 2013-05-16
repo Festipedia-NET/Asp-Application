@@ -60,7 +60,7 @@
             </asp:LinkButton>  
             <asp:LinkButton ID="btnSetEnglish" runat="server"
                 CommandArgument="en-GB" OnClick="RequestLanguageChange_Click">
-                <asp:Image ID="en" runat="server" ImageUrl="~/Images/en-ico.png" />
+                <asp:Image ID="en" runat="server" ImageUrl="~/Images/uk-ico.png" />
             </asp:LinkButton>
         </p>
     </header>
