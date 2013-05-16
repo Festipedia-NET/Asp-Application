@@ -65,6 +65,17 @@ namespace Festipedia
             }
         }
 
+        protected void RequestLanguageChange_Click(object sender, EventArgs e)
+        {
+            LinkButton senderLink = sender as LinkButton;
+
+            //store requested language as new culture in the session
+            Session["MyCulture"] = senderLink.CommandArgument;
+
+            //reload last requested page with new culture
+            Server.Transfer(Request.Path);
+        }
+
         protected void Page_Load(object sender, EventArgs e)
         {
 

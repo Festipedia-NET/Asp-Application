@@ -53,6 +53,14 @@
                 </nav>
             </div>
         </div>
+        <p id="languages">
+            <asp:LinkButton ID="btnSetDutch" runat="server" Text="Dutch"
+                CommandArgument="nl-be" OnClick="RequestLanguageChange_Click">
+            </asp:LinkButton>  
+            <asp:LinkButton ID="btnSetEnglish" runat="server" Text="English"
+                CommandArgument="en-GB" OnClick="RequestLanguageChange_Click">
+            </asp:LinkButton>
+        </p>
     </header>
     <div id="body">
         <asp:ContentPlaceHolder runat="server" ID="FeaturedContent" />
@@ -66,7 +74,7 @@
             <div class="float-left">
                 <ul id="footer-menu">
                     <li><a id="A1" runat="server" href="~/" >Home</a></li>
-                    <li><a id="A2" runat="server" href="~/" >Bands</a></li>
+                    <li> - <a id="A2" runat="server" href="~/" >Bands</a> - </li>
                     <li><a id="A3" runat="server" href="~/" >Festivals</a></li>
                                 
                 </ul>
@@ -76,7 +84,7 @@
                 <p id="footer-tekst">&copy; <%: DateTime.Now.Year %> - FestiPedia</p>
             </div>
 
-              <div class="float-right">
+            <div class="float-right">
                 <section id="login">
                     <asp:LoginView ID="LoginView1" runat="server" ViewStateMode="Disabled">
                         <AnonymousTemplate>
@@ -95,6 +103,7 @@
                     </asp:LoginView>
                 </section>
             </div>
+
         </div>
     </footer>
     </form>

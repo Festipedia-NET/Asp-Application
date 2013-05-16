@@ -671,3 +671,16 @@ tr.pager td {
     margin-left:100px;
     margin-top:40px;
 }
+
+#languages a{
+    font-size:16px;
+    text-align:center;
+    color:#1bca00 !important;
+}
+
+#languages {
+    position: absolute;
+    right: 10px;
+    top: 100px;
+    text-align:center;
+}
