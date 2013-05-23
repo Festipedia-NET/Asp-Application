@@ -133,6 +133,51 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Gebruik een account om in te loggen..
+        /// </summary>
+        internal static string logintext1 {
+            get {
+                return ResourceManager.GetString("logintext1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Inlog Formulier.
+        /// </summary>
+        internal static string logintext2 {
+            get {
+                return ResourceManager.GetString("logintext2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Als je nog geen account hebt..
+        /// </summary>
+        internal static string logintext3 {
+            get {
+                return ResourceManager.GetString("logintext3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Gebruik een andere dienst om in te loggen..
+        /// </summary>
+        internal static string logintext4 {
+            get {
+                return ResourceManager.GetString("logintext4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Wachtwoord.
+        /// </summary>
+        internal static string password {
+            get {
+                return ResourceManager.GetString("password", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Registreren.
         /// </summary>
         internal static string register {
@@ -142,11 +187,29 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Herinner mij?.
+        /// </summary>
+        internal static string rememberMe {
+            get {
+                return ResourceManager.GetString("rememberMe", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Snel en gemakkelijk info over bands en festivals!.
         /// </summary>
         internal static string slogan {
             get {
                 return ResourceManager.GetString("slogan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Gebruikersnaam.
+        /// </summary>
+        internal static string username {
+            get {
+                return ResourceManager.GetString("username", resourceCulture);
             }
         }
     }

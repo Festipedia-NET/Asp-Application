@@ -141,10 +141,31 @@
   <data name="login" xml:space="preserve">
     <value>Inloggen</value>
   </data>
+  <data name="logintext1" xml:space="preserve">
+    <value>Gebruik een account om in te loggen.</value>
+  </data>
+  <data name="logintext2" xml:space="preserve">
+    <value>Inlog Formulier</value>
+  </data>
+  <data name="logintext3" xml:space="preserve">
+    <value>Als je nog geen account hebt.</value>
+  </data>
+  <data name="logintext4" xml:space="preserve">
+    <value>Gebruik een andere dienst om in te loggen.</value>
+  </data>
+  <data name="password" xml:space="preserve">
+    <value>Wachtwoord</value>
+  </data>
   <data name="register" xml:space="preserve">
     <value>Registreren</value>
   </data>
+  <data name="rememberMe" xml:space="preserve">
+    <value>Herinner mij?</value>
+  </data>
   <data name="slogan" xml:space="preserve">
     <value>Snel en gemakkelijk info over bands en festivals!</value>
+  </data>
+  <data name="username" xml:space="preserve">
+    <value>Gebruikersnaam</value>
   </data>
 </root>
