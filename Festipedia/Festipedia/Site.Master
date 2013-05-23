@@ -97,11 +97,11 @@
                             </ul>
                         </AnonymousTemplate>
                         <LoggedInTemplate>
-                            <p>
+                            <span>
                                 Hello, <a id="A1" runat="server" class="username login" href="~/Account/Manage.aspx" title="Manage your account">
                                     <asp:LoginName ID="LoginName1" runat="server" CssClass="username"  /></a>!
                                 <asp:LoginStatus ID="LoginStatus1" runat="server" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="~/" />
-                            </p>
+                            </span>
                         </LoggedInTemplate>
                     </asp:LoginView>
                 </section>
