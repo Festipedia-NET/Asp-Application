@@ -9,23 +9,44 @@
     </section>
 </asp:Content>
 <asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
-    <h3>Upcoming Festivals:</h3>
+    <h2 class="content-title">Upcoming Festivals:</h2>
    
-    <ul>
-        <asp:ListView ID="upcomingFestivals" runat="server">
+    <!-- Begin Listview -->
+        <asp:ListView ID="upcomingFestivals" runat="server" ItemType="Festipedia.Models.Festival" SelectMethod="getListData" AutoGenerateColumns="false">
             <LayoutTemplate>
-                <li>
-                    <asp:PlaceHolder ID="itemPlaceholder" runat="server" />
-                </li>
+                  <table class="festview" runat="server" id="tblFest">
+                    <tr id="Tr2" runat="server">
+                         <th id="Th1" runat="server">Festival Name</th>
+                         <th id="Th2" runat="server">Location</th>
+                         <th id="Th3" runat="server">Date</th>
+                         <th id="Th4" runat="server">Duration</th>
+                    </tr>
+                    <tr runat="server" id="itemPlaceholder" />
+                 </table>
             </LayoutTemplate>
 
             <ItemTemplate>
-                
+                 <tr id="Tr1" runat="server">                       
+                            <td>
+                              <a href ="#" ><%#: Item.fest_naam %> </a>
+                            </td>
+                            <td >
+                             <%#: Item.fest_locatie %>
+                            </td>
+                            <td >
+                             <%#: Item.fest_datum %>
+                            </td>
+                            <td >
+                             <%#: Item.fest_duur %> Days
+                            </td>
+                 </tr>
             </ItemTemplate>
            
             <EmptyDataTemplate>
                     Error, Data could not be loaded
             </EmptyDataTemplate>
-        </asp:ListView>      
-    </ul>
+        </asp:ListView>  
+      <!-- Einde Listview --> 
+      
+    
 </asp:Content>
