@@ -9,11 +9,11 @@ using System.Web.UI.WebControls;
 
 namespace Festipedia
 {
-    public partial class FestiDetail : BasePage
+    public partial class FestDetail : BasePage
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-           
+            
         }
     }
 }
