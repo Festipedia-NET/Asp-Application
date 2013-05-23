@@ -18,12 +18,12 @@
                         <li>
                             <asp:Label runat="server" AssociatedControlID="UserName" Text="<%$Resources:Resource, username %>"></asp:Label>
                             <asp:TextBox runat="server" ID="UserName" />
-                            <asp:RequiredFieldValidator runat="server" ControlToValidate="UserName" CssClass="field-validation-error" ErrorMessage="The user name field is required." />
+                            <asp:RequiredFieldValidator runat="server" ControlToValidate="UserName" CssClass="field-validation-error" ErrorMessage="<%$Resources:Resource, usernameError %>" />
                         </li>
                         <li>
                             <asp:Label runat="server" AssociatedControlID="Password" Text="<%$Resources:Resource, password %>"></asp:Label>
                             <asp:TextBox runat="server" ID="Password" TextMode="Password" />
-                            <asp:RequiredFieldValidator runat="server" ControlToValidate="Password" CssClass="field-validation-error" ErrorMessage="The password field is required." />
+                            <asp:RequiredFieldValidator runat="server" ControlToValidate="Password" CssClass="field-validation-error" ErrorMessage="<%$Resources:Resource, passwordError %>" />
                         </li>
                         <li>
                             <asp:CheckBox runat="server" ID="RememberMe" />

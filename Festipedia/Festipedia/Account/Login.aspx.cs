@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace Festipedia.Account
 {
-    public partial class Login : Page
+    public partial class Login : BasePage
     {
         protected void Page_Load(object sender, EventArgs e)
         {

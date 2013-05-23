@@ -187,6 +187,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Wachtwoord vereist.
+        /// </summary>
+        internal static string passwordError {
+            get {
+                return ResourceManager.GetString("passwordError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Registreren.
         /// </summary>
         internal static string register {
@@ -219,6 +228,15 @@ namespace Resources {
         internal static string username {
             get {
                 return ResourceManager.GetString("username", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Gebruikersnaam vereist.
+        /// </summary>
+        internal static string usernameError {
+            get {
+                return ResourceManager.GetString("usernameError", resourceCulture);
             }
         }
     }

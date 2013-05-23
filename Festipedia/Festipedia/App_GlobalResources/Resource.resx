@@ -159,6 +159,9 @@
   <data name="password" xml:space="preserve">
     <value>Wachtwoord</value>
   </data>
+  <data name="passwordError" xml:space="preserve">
+    <value>Wachtwoord vereist</value>
+  </data>
   <data name="register" xml:space="preserve">
     <value>Registreren</value>
   </data>
@@ -170,5 +173,8 @@
   </data>
   <data name="username" xml:space="preserve">
     <value>Gebruikersnaam</value>
+  </data>
+  <data name="usernameError" xml:space="preserve">
+    <value>Gebruikersnaam vereist</value>
   </data>
 </root>
