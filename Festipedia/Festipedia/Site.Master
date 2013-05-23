@@ -77,7 +77,7 @@
             <div class="float-left">
                 <ul id="footer-menu">
                     <li><a id="A1" runat="server" href="~/" >Home</a></li>
-                    <li> - <a id="A2" runat="server" href="~/" ><asp:Label ID="Label3" runat="server" Text="<%$Resources:Resource, groepen %>"></asp:Label></a> - </li>
+                    <li> - <a id="A2" runat="server" href="~/" ><asp:Label runat="server" Text="<%$Resources:Resource, groepen %>"></asp:Label></a> - </li>
                     <li><a id="A3" runat="server" href="~/" >Festivals</a></li>               
                 </ul>
             </div>
