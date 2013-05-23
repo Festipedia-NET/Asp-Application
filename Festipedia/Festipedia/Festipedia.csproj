@@ -209,6 +209,7 @@
     <Content Include="Images\vs-ico.png" />
     <Content Include="packages.config" />
     <Content Include="Admin\web.config" />
+    <Content Include="Edit\web.config" />
     <None Include="Scripts\jquery-1.7.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.7.1.js" />
     <Content Include="Scripts\jquery-1.7.1.min.js" />
