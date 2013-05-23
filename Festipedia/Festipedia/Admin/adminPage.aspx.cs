@@ -23,7 +23,7 @@ namespace Festipedia.Admin
 
         protected void CreateUser_CreatedUser(object sender, EventArgs e)
         {
-            Response.Redirect("http://www.google.com");
+            successLabel.Text = "De user is toegevoegd.";
         }
 
     }

@@ -7,6 +7,7 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
     <section class="contentLeft">
         <h2>Add user</h2>
+        <asp:Label ID="successLabel" runat="server" Text=""></asp:Label>
         <asp:CreateUserWizard ID="CreateUserWizard1" runat="server" LoginCreatedUser="false" OnCreatedUser="CreateUser_CreatedUser">
             <WizardSteps>
                 <asp:CreateUserWizardStep ID="CreateUserWizardStep1" runat="server">
