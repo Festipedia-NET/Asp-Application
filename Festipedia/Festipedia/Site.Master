@@ -15,7 +15,7 @@
 </head>
 <body>
     <div id="wrapper">
-    <form id="Form1" runat="server">
+    <form runat="server">
     <asp:ScriptManager runat="server">
         <Scripts>
             <%--Framework Scripts--%>
@@ -54,12 +54,12 @@
             </div>
 
             <div id="languages">
-                <asp:LinkButton ID="btnSetDutch" runat="server" 
-                    CommandArgument="nl-be" OnClick="RequestLanguageChange_Click">
+                <asp:LinkButton ID="btnSetDutch" runat="server"
+                    CommandArgument="nl-BE" OnClientClick="RequestLanguageChange_Click">
                     <asp:Image ID="be" runat="server" ImageUrl="~/Images/be-ico.png" />
                 </asp:LinkButton>  
                 <asp:LinkButton ID="btnSetEnglish" runat="server"
-                    CommandArgument="en-GB" OnClick="RequestLanguageChange_Click">
+                    CommandArgument="en-GB" OnClientClick="RequestLanguageChange_Click">
                     <asp:Image ID="uk" runat="server" ImageUrl="~/Images/uk-ico.png" />
                 </asp:LinkButton>
             </div>
