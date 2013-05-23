@@ -78,8 +78,7 @@
                 <ul id="footer-menu">
                     <li><a id="A1" runat="server" href="~/" >Home</a></li>
                     <li> - <a id="A2" runat="server" href="~/" >Bands</a> - </li>
-                    <li><a id="A3" runat="server" href="~/" >Festivals</a></li>
-                                
+                    <li><a id="A3" runat="server" href="~/" >Festivals</a></li>               
                 </ul>
             </div>
 
@@ -98,8 +97,7 @@
                         </AnonymousTemplate>
                         <LoggedInTemplate>
                             <span>
-                                Hello, <a id="A1" runat="server" class="username login" href="~/Account/Manage.aspx" title="Manage your account">
-                                    <asp:LoginName ID="LoginName1" runat="server" CssClass="username"  /></a>!
+                                <a id="A1" runat="server" class="login" href="~/Account/Manage.aspx" title="Manage your account"><asp:LoginName ID="LoginName1" runat="server" CssClass="username"  /></a>
                                 <asp:LoginStatus ID="LoginStatus1" runat="server" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="~/" />
                             </span>
                         </LoggedInTemplate>
