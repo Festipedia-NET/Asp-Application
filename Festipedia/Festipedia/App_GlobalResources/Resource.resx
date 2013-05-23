@@ -117,7 +117,25 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="test" xml:space="preserve">
-    <value>getest</value>
+  <data name="bandnaam" xml:space="preserve">
+    <value>Band Naam</value>
+  </data>
+  <data name="festdatum" xml:space="preserve">
+    <value>Datum</value>
+  </data>
+  <data name="festduur" xml:space="preserve">
+    <value>Duur</value>
+  </data>
+  <data name="festlocatie" xml:space="preserve">
+    <value>Locatie</value>
+  </data>
+  <data name="festnaam" xml:space="preserve">
+    <value>Festival Naam</value>
+  </data>
+  <data name="genre" xml:space="preserve">
+    <value>Genre</value>
+  </data>
+  <data name="slogan" xml:space="preserve">
+    <value>Snel en gemakkelijk info over bands en festivals!</value>
   </data>
 </root>

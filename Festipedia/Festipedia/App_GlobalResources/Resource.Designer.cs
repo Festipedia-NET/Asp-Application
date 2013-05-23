@@ -61,11 +61,65 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to getest.
+        ///   Looks up a localized string similar to Band Naam.
         /// </summary>
-        internal static string test {
+        internal static string bandnaam {
             get {
-                return ResourceManager.GetString("test", resourceCulture);
+                return ResourceManager.GetString("bandnaam", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Datum.
+        /// </summary>
+        internal static string festdatum {
+            get {
+                return ResourceManager.GetString("festdatum", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Duur.
+        /// </summary>
+        internal static string festduur {
+            get {
+                return ResourceManager.GetString("festduur", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Locatie.
+        /// </summary>
+        internal static string festlocatie {
+            get {
+                return ResourceManager.GetString("festlocatie", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Festival Naam.
+        /// </summary>
+        internal static string festnaam {
+            get {
+                return ResourceManager.GetString("festnaam", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Genre.
+        /// </summary>
+        internal static string genre {
+            get {
+                return ResourceManager.GetString("genre", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Snel en gemakkelijk info over bands en festivals!.
+        /// </summary>
+        internal static string slogan {
+            get {
+                return ResourceManager.GetString("slogan", resourceCulture);
             }
         }
     }

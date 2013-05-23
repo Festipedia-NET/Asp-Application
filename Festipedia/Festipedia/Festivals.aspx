@@ -10,10 +10,10 @@
 <asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
         <asp:GridView ID="festView" runat="server" AutoGenerateColumns="false" CssClass="festview">
             <Columns>
-                <asp:BoundField DataField="fest_naam" HeaderText="Festival" SortExpression="fest_naam"/>
-                <asp:BoundField DataField="fest_locatie" HeaderText="Location" SortExpression="fest_locatie"/>
-                <asp:BoundField DataField="fest_datum" HeaderText="Date"  DataFormatString="{0:d}" SortExpression="fest_datum"/>
-                <asp:BoundField DataField="fest_duur" HeaderText="Duration" SortExpression="fest_duur"/>
+                <asp:BoundField DataField="fest_naam" HeaderText="<%$Resources:Resource, festnaam %>" SortExpression="fest_naam"/>
+                <asp:BoundField DataField="fest_locatie" HeaderText="<%$Resources:Resource, festlocatie %>" SortExpression="fest_locatie"/>
+                <asp:BoundField DataField="fest_datum" HeaderText="<%$Resources:Resource, festdatum %>"  DataFormatString="{0:d}" SortExpression="fest_datum"/>
+                <asp:BoundField DataField="fest_duur" HeaderText="<%$Resources:Resource, festduur %>" SortExpression="fest_duur"/>
             </Columns>
         </asp:GridView>  
 </asp:Content>
