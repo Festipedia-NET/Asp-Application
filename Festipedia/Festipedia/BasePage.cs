@@ -9,7 +9,7 @@ namespace Festipedia
 {
     public class BasePage : System.Web.UI.Page
     {
-        private const string m_DefaultCulture = "nl-be";
+        private const string m_DefaultCulture = "nl-BE";
 
         protected override void InitializeCulture()
         {
