@@ -7,13 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Festipedia.Account
-{
-
-
-    public partial class Login
-    {
-
+namespace Festipedia.Account {
+    
+    
+    public partial class Login {
+        
         /// <summary>
         /// RegisterHyperLink control.
         /// </summary>
@@ -22,7 +20,7 @@ namespace Festipedia.Account
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HyperLink RegisterHyperLink;
-
+        
         /// <summary>
         /// OpenAuthLogin control.
         /// </summary>
