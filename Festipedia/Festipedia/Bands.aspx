@@ -8,6 +8,8 @@
     </section>
 </asp:Content>
 <asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
+    <asp:Label id=lblWelcome Text="<%$Resources:Resource, test %>" 
+           runat="server"></asp:Label>
     <asp:GridView ID="bandView" runat="server" AutoGenerateColumns="false" CssClass="bandview" AllowPaging="true" OnPageIndexChanging="bandView_PageIndexChanging" OnSorting="bandView_Sorting" PageSize="15">
             <Columns>
                 <asp:BoundField DataField="band_naam" HeaderText="Band Name"/>

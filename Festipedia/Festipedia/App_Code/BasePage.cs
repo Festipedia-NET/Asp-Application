@@ -24,6 +24,7 @@ namespace Festipedia
             Thread.CurrentThread.CurrentCulture = CultureInfo.CreateSpecificCulture(culture);
             Thread.CurrentThread.CurrentUICulture = new CultureInfo(culture);
 
+
             //call base class
             base.InitializeCulture();
         }
