@@ -395,6 +395,10 @@ fieldset.open-auth-providers {
     fieldset.open-auth-providers button {
         margin-bottom: 12px;
     }
+
+.visible123 {
+    visibility: visible;
+}
     
 /* contact */
 .contact h3 {
