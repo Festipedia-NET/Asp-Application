@@ -165,10 +165,10 @@
   <data name="slogan" xml:space="preserve">
     <value>Fast and easy info on festivals and bands!</value>
   </data>
-  <data name="String1" xml:space="preserve">
-    <value />
-  </data>
   <data name="username" xml:space="preserve">
     <value>Username</value>
+  </data>
+  <data name="adminTitel" xml:space="preserve">
+    <value>Manage users</value>
   </data>
 </root>

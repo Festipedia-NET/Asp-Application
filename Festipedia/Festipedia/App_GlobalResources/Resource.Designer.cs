@@ -61,6 +61,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Gebruikers beheren.
+        /// </summary>
+        internal static string adminTitel {
+            get {
+                return ResourceManager.GetString("adminTitel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Groep Naam.
         /// </summary>
         internal static string bandnaam {

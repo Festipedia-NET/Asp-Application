@@ -367,7 +367,7 @@ aside {
 }
 
 /* login page */
-#loginForm {
+#loginForm, .contentLeft {
     border-right: solid 2px #c8c8c8;
     float: left;
     width: 55%;
@@ -378,7 +378,7 @@ aside {
         margin-left: 15px;
     }
 
-#socialLoginForm {
+#socialLoginForm, .contentRight {
     margin-left: 40px;
     float: left;
     width: 40%;
