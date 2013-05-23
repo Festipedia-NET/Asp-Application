@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Bands" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Bands.aspx.cs" Inherits="Festipedia.Bands" %>
+﻿<%@ Page Title="<%$Resources:Resource, groepen %>" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Bands.aspx.cs" Inherits="Festipedia.Bands" %>
 
 <asp:Content runat="server" ID="FeaturedContent" ContentPlaceHolderID="FeaturedContent">
     <section class="featured">

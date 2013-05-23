@@ -47,7 +47,7 @@
                 <nav>
                     <ul id="menu">
                         <li><a runat="server" href="~/">Home</a></li>
-                        <li><a runat="server" href="~/Bands.aspx">Bands</a></li>
+                        <li><a runat="server" href="~/Bands.aspx"><asp:Label ID="Label1" runat="server" Text="<%$Resources:Resource, groepen %>"></asp:Label></a></li>
                         <li><a runat="server" href="~/Festivals.aspx">Festivals</a></li>
                     </ul>
                 </nav>
@@ -77,7 +77,7 @@
             <div class="float-left">
                 <ul id="footer-menu">
                     <li><a id="A1" runat="server" href="~/" >Home</a></li>
-                    <li> - <a id="A2" runat="server" href="~/" >Bands</a> - </li>
+                    <li> - <a id="A2" runat="server" href="~/" ><asp:Label ID="Label3" runat="server" Text="<%$Resources:Resource, groepen %>"></asp:Label></a> - </li>
                     <li><a id="A3" runat="server" href="~/" >Festivals</a></li>               
                 </ul>
             </div>
@@ -91,8 +91,8 @@
                     <asp:LoginView ID="LoginView1" runat="server" ViewStateMode="Disabled">
                         <AnonymousTemplate>
                             <ul>
-                                <li><a id="regLink" runat="server" href="~/Account/Register.aspx" class="login">Register</a></li>
-                                <li><a id="loginLink" runat="server" href="~/Account/Login.aspx" class="login">Log in</a></li>
+                                <li><a id="regLink" runat="server" href="~/Account/Register.aspx" class="login"><asp:Label ID="Label2" runat="server" Text="<%$Resources:Resource, login %>"></asp:Label></a></li>
+                                <li><a id="loginLink" runat="server" href="~/Account/Login.aspx" class="login"><asp:Label ID="Label3" runat="server" Text="<%$Resources:Resource, register %>"></asp:Label></a></li>
                             </ul>
                         </AnonymousTemplate>
                         <LoggedInTemplate>

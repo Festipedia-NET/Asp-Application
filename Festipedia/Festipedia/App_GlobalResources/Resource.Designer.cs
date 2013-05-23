@@ -61,7 +61,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Band Naam.
+        ///   Looks up a localized string similar to Groep Naam.
         /// </summary>
         internal static string bandnaam {
             get {
@@ -111,6 +111,33 @@ namespace Resources {
         internal static string genre {
             get {
                 return ResourceManager.GetString("genre", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Groepen.
+        /// </summary>
+        internal static string groepen {
+            get {
+                return ResourceManager.GetString("groepen", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Inloggen.
+        /// </summary>
+        internal static string login {
+            get {
+                return ResourceManager.GetString("login", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Registreren.
+        /// </summary>
+        internal static string register {
+            get {
+                return ResourceManager.GetString("register", resourceCulture);
             }
         }
         

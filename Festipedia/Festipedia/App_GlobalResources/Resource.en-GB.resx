@@ -135,6 +135,15 @@
   <data name="genre" xml:space="preserve">
     <value>Genre</value>
   </data>
+  <data name="groepen" xml:space="preserve">
+    <value>Bands</value>
+  </data>
+  <data name="login" xml:space="preserve">
+    <value>Log In</value>
+  </data>
+  <data name="register" xml:space="preserve">
+    <value>Register</value>
+  </data>
   <data name="slogan" xml:space="preserve">
     <value>Fast and easy info on festivals and bands!</value>
   </data>

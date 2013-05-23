@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="bandnaam" xml:space="preserve">
-    <value>Band Naam</value>
+    <value>Groep Naam</value>
   </data>
   <data name="festdatum" xml:space="preserve">
     <value>Datum</value>
@@ -134,6 +134,15 @@
   </data>
   <data name="genre" xml:space="preserve">
     <value>Genre</value>
+  </data>
+  <data name="groepen" xml:space="preserve">
+    <value>Groepen</value>
+  </data>
+  <data name="login" xml:space="preserve">
+    <value>Inloggen</value>
+  </data>
+  <data name="register" xml:space="preserve">
+    <value>Registreren</value>
   </data>
   <data name="slogan" xml:space="preserve">
     <value>Snel en gemakkelijk info over bands en festivals!</value>
