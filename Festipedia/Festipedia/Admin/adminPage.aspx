@@ -29,14 +29,14 @@
                         
                         <asp:Label ID="EmailLabel" runat="server" AssociatedControlID="Email">E-mail:
                         <asp:RequiredFieldValidator ID="EmailRequired" runat="server" ControlToValidate="Email" CssClass="field-validation-error"
-                            ErrorMessage="Required." ValidationGroup="CreateUserWizard1"></asp:RequiredFieldValidator></asp:Label>
+                            ErrorMessage="Required." ValidationGroup="CreateUserWizard1"></asp:RequiredFieldValidator>
+                        </asp:Label>
                         <asp:TextBox ID="Email" runat="server"></asp:TextBox>
 
                         <asp:CompareValidator ID="PasswordCompare" runat="server" ControlToCompare="Password" ControlToValidate="ConfirmPassword" Display="Dynamic" 
                             ErrorMessage="The Password and Confirmation Password must match." ValidationGroup="CreateUserWizard1"></asp:CompareValidator>
                     </ContentTemplate>
                 </asp:CreateUserWizardStep>
-                
                 <asp:CompleteWizardStep>
                     <ContentTemplate>
                         Complete
@@ -48,7 +48,7 @@
     </section>
     <section class="contentRight">
         <h2>Manage user</h2>
-        <asp:DropDownList class="dropList" id="UserList" runat="server" AutoPostBack="false" OnSelectedIndexChanged="UserList_SelectedIndexChanged"></asp:DropDownList><br />
-        <asp:DropDownList class="dropList" id="RoleList" runat="server" AutoPostBack="false" OnSelectedIndexChanged="RoleList_SelectedIndexChanged"></asp:DropDownList> 
+        <asp:DropDownList class="dropList" id="RoleList" runat="server" AutoPostBack="true" OnSelectedIndexChanged="RoleList_SelectedIndexChanged"></asp:DropDownList><br />
+        <asp:DropDownList class="dropList" id="UserRoleList" runat="server" AutoPostBack="true"></asp:DropDownList>
     </section>
 </asp:Content>
