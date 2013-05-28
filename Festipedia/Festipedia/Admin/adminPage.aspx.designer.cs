@@ -40,21 +40,21 @@ namespace Festipedia.Admin {
         protected global::System.Web.UI.WebControls.CreateUserWizardStep CreateUserWizardStep1;
         
         /// <summary>
-        /// RoleList control.
+        /// UserList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList RoleList;
+        protected global::System.Web.UI.WebControls.DropDownList UserList;
         
         /// <summary>
-        /// UserRoleList control.
+        /// UsersRoleList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList UserRoleList;
+        protected global::System.Web.UI.WebControls.Repeater UsersRoleList;
     }
 }
