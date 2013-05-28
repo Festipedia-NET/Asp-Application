@@ -18,25 +18,20 @@ namespace Festipedia.Admin
                 String[] query = Roles.GetAllRoles();
                 RoleList.DataSource = query.ToList();
                 RoleList.DataBind();
+
+                
             }
         }
 
         protected void CreateUser_CreatedUser(object sender, EventArgs e)
         {
-            successLabel.Text = "De user is toegevoegd.";
             string continueUrl =  "~/Admin/adminPage.aspx";
             Response.Redirect(continueUrl);
         }
 
-        protected void RoleList_SelectedIndexChanged(object sender, EventArgs e)
+        protected void UserList_SelectedIndexChanged(object sender, EventArgs e)
         {
-            String selectRole = RoleList.Text;
-            String[] allUsers = Roles.GetUsersInRole(selectRole);
-            UserRoleList.DataSource = allUsers.ToList();
-            UserRoleList.DataBind();
+
         }
-
     }
-
-
 }
