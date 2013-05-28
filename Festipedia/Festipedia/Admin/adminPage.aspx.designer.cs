@@ -13,15 +13,6 @@ namespace Festipedia.Admin {
     public partial class adminPage {
         
         /// <summary>
-        /// successLabel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label successLabel;
-        
-        /// <summary>
         /// CreateUserWizard1 control.
         /// </summary>
         /// <remarks>
@@ -29,15 +20,6 @@ namespace Festipedia.Admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CreateUserWizard CreateUserWizard1;
-        
-        /// <summary>
-        /// CreateUserWizardStep1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CreateUserWizardStep CreateUserWizardStep1;
         
         /// <summary>
         /// RoleList control.
