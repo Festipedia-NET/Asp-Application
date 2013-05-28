@@ -7,29 +7,36 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Festipedia.Account
-{
-
-
-    public partial class Login
-    {
-
+namespace Festipedia {
+    
+    
+    public partial class Admin {
+        
         /// <summary>
-        /// RegisterHyperLink control.
+        /// Button1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink RegisterHyperLink;
-
+        protected global::System.Web.UI.WebControls.Button Button1;
+        
         /// <summary>
-        /// OpenAuthLogin control.
+        /// Button2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Festipedia.Account.OpenAuthProviders OpenAuthLogin;
+        protected global::System.Web.UI.WebControls.Button Button2;
+        
+        /// <summary>
+        /// Button3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button3;
     }
 }

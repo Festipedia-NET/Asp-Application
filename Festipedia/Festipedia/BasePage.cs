@@ -9,7 +9,7 @@ namespace Festipedia
 {
     public class BasePage : System.Web.UI.Page
     {
-        private const string m_DefaultCulture = "nl-BE";
+        private const string m_DefaultCulture = "nl-be";
 
         protected override void InitializeCulture()
         {
@@ -23,7 +23,6 @@ namespace Festipedia
             //set culture to current thread
             Thread.CurrentThread.CurrentCulture = CultureInfo.CreateSpecificCulture(culture);
             Thread.CurrentThread.CurrentUICulture = new CultureInfo(culture);
-
 
             //call base class
             base.InitializeCulture();
