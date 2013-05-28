@@ -37,12 +37,6 @@
                             ErrorMessage="The Password and Confirmation Password must match." ValidationGroup="CreateUserWizard1"></asp:CompareValidator>
                     </ContentTemplate>
                 </asp:CreateUserWizardStep>
-                <asp:CompleteWizardStep>
-                    <ContentTemplate>
-                        Complete
-                        <asp:Button ID="ContinueButton" runat="server" CausesValidation="False" CommandName="Continue" Text="Continue" ValidationGroup="CreateUserWizard1" />
-                    </ContentTemplate>
-                </asp:CompleteWizardStep>
             </WizardSteps>
         </asp:CreateUserWizard>
     </section>
