@@ -188,6 +188,8 @@
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="EditUser.aspx" />
     <Content Include="DeleteUser.aspx" />
+    <Content Include="Edit\add.aspx" />
+    <Content Include="Edit\edit.aspx" />
     <Content Include="Edit\editPage.aspx" />
     <Content Include="Festivals.aspx" />
     <Content Include="Images\accent.png" />
@@ -331,6 +333,20 @@
     </Compile>
     <Compile Include="DeleteUser.aspx.designer.cs">
       <DependentUpon>DeleteUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Edit\add.aspx.cs">
+      <DependentUpon>add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Edit\add.aspx.designer.cs">
+      <DependentUpon>add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Edit\edit.aspx.cs">
+      <DependentUpon>edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Edit\edit.aspx.designer.cs">
+      <DependentUpon>edit.aspx</DependentUpon>
     </Compile>
     <Compile Include="Edit\editPage.aspx.cs">
       <DependentUpon>editPage.aspx</DependentUpon>
