@@ -73,20 +73,7 @@
     </div>
     <footer>
         <div class="content-wrapper">
-            
             <div class="float-left">
-                <ul id="footer-menu">
-                    <li><a id="A1" runat="server" href="~/" >Home</a></li>
-                    <li> - <a id="A2" runat="server" href="~/" ><asp:Label runat="server" Text="<%$Resources:Resource, groepen %>"></asp:Label></a> - </li>
-                    <li><a id="A3" runat="server" href="~/" >Festivals</a></li>               
-                </ul>
-            </div>
-
-            <div class="float-left">
-                <p id="footer-tekst">&copy; <%: DateTime.Now.Year %> - FestiPedia</p>
-            </div>
-
-            <div class="float-right">
                 <section id="login">
                     <asp:LoginView ID="LoginView1" runat="server" ViewStateMode="Disabled">
                         <AnonymousTemplate>
@@ -95,12 +82,6 @@
                                 <li><a id="loginLink" runat="server" href="~/Account/Login.aspx" class="login"><asp:Label ID="Label3" runat="server" Text="<%$Resources:Resource, login %>"></asp:Label></a></li>
                             </ul>
                         </AnonymousTemplate>
-                        <LoggedInTemplate>
-                            <span>
-                                <a id="A1" runat="server" class="login" href="~/Account/Manage.aspx" title="Manage your account"><asp:LoginName ID="LoginName1" runat="server" CssClass="username"  /></a>
-                                <asp:LoginStatus ID="LoginStatus1" runat="server" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="~/" />
-                            </span>
-                        </LoggedInTemplate>
                         <RoleGroups>
                             <asp:RoleGroup Roles="Admin">
                                 <ContentTemplate>
@@ -121,6 +102,9 @@
                 </section>
             </div>
 
+            <div class="float-right">
+                <p id="footer-tekst">&copy; <%: DateTime.Now.Year %> - FestiPedia</p>
+            </div>
         </div>
     </footer>
     </form>
