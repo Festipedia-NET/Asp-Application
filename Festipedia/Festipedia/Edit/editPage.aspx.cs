@@ -7,9 +7,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace Festipedia
+namespace Festipedia.Edit
 {
-    public partial class Festivals : BasePage
+    public partial class editPage : BasePage
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -17,7 +17,7 @@ namespace Festipedia
             {
                 var query = from f in db.Festivals orderby f.fest_datum select f;
                 festView.DataSource = query.ToList();
-                festView.DataBind();                
+                festView.DataBind();
             }
         }
     }
