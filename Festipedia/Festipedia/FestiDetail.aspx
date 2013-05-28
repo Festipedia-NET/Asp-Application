@@ -13,7 +13,7 @@
 
 
     <asp:ListBox ID="ListBox1" runat="server" AutoPostBack="True" CssClass="listbox" DataSourceID="SqlDataSource1" DataTextField="fest_naam" DataValueField="fest_id" Rows="15" Width="200px"></asp:ListBox>
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:groep15_festivalsContext %>" SelectCommand="SELECT [fest_id], [fest_naam] FROM [Festivals]"></asp:SqlDataSource>
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:groep15_festivalsContext %>" SelectCommand="SELECT [fest_id], [fest_naam] FROM [Festivals] ORDER BY [fest_naam]"></asp:SqlDataSource>
     <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" CssClass="festview md" DataKeyNames="fest_id" DataSourceID="SqlDataSource2" Height="50px" Width="125px">
         <Fields>
             <asp:BoundField DataField="fest_id" HeaderText="ID" InsertVisible="False" ReadOnly="True" SortExpression="fest_id" />
