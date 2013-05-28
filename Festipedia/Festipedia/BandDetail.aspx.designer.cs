@@ -10,7 +10,7 @@
 namespace Festipedia {
     
     
-    public partial class FestiDetail {
+    public partial class BandDetail {
         
         /// <summary>
         /// ListBox1 control.
