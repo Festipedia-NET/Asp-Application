@@ -101,6 +101,22 @@
                                 <asp:LoginStatus ID="LoginStatus1" runat="server" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="~/" />
                             </span>
                         </LoggedInTemplate>
+                        <RoleGroups>
+                            <asp:RoleGroup Roles="Admin">
+                                <ContentTemplate>
+                                <a id="A1" runat="server" class="login" href="~/Account/Manage.aspx" title="Manage your account"><asp:LoginName ID="LoginName1" runat="server" CssClass="username"  /></a>
+                                <asp:LoginStatus ID="LoginStatus1" runat="server" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="~/" />
+                                <a id="btnAdmin" runat="server" class="login" href="~/Admin/adminPage.aspx" title="Admin page"><asp:Label ID="Label2" runat="server" Text="Admin"></asp:Label></a>
+                                </ContentTemplate>
+                            </asp:RoleGroup>
+                            <asp:RoleGroup Roles="Editors">
+                                <ContentTemplate>
+                                <a id="A1" runat="server" class="login" href="~/Account/Manage.aspx" title="Manage your account"><asp:LoginName ID="LoginName1" runat="server" CssClass="username"  /></a>
+                                <asp:LoginStatus ID="LoginStatus1" runat="server" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="~/" />
+                                <a id="btnEditor" runat="server" class="login" href="~/Edit/editPage.aspx" title="Editor page"><asp:Label ID="Label4" runat="server" Text="Editor"></asp:Label></a>
+                                </ContentTemplate>
+                            </asp:RoleGroup>
+                        </RoleGroups>
                     </asp:LoginView>
                 </section>
             </div>
