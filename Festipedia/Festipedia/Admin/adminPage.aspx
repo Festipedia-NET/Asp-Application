@@ -29,7 +29,8 @@
                         
                         <asp:Label ID="EmailLabel" runat="server" AssociatedControlID="Email">E-mail:
                         <asp:RequiredFieldValidator ID="EmailRequired" runat="server" ControlToValidate="Email" CssClass="field-validation-error"
-                            ErrorMessage="Required." ValidationGroup="CreateUserWizard1"></asp:RequiredFieldValidator></asp:Label>
+                            ErrorMessage="Required." ValidationGroup="CreateUserWizard1"></asp:RequiredFieldValidator>
+                        </asp:Label>
                         <asp:TextBox ID="Email" runat="server"></asp:TextBox>
 
                         <asp:CompareValidator ID="PasswordCompare" runat="server" ControlToCompare="Password" ControlToValidate="ConfirmPassword" Display="Dynamic" 
