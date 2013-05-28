@@ -39,6 +39,9 @@
                 </asp:CreateUserWizardStep>
             </WizardSteps>
         </asp:CreateUserWizard>
+        <h2>Delete user</h2>
+        <asp:DropDownList class="dropList" id="UserDelete" runat="server" AutoPostBack="false"></asp:DropDownList><br />
+        <asp:Button ID="deletePass" runat="server" Text="Delete" OnClick="DeletePass_Click" />
     </section>
     <section class="contentRight">
         <h2>Manage user</h2>
@@ -47,6 +50,19 @@
             <ItemTemplate>           
                 <asp:CheckBox runat="server" ID="RoleCheckBox" AutoPostBack="true" Text='<%# Container.DataItem %>' />
             </ItemTemplate> 
-        </asp:Repeater> 
+        </asp:Repeater>
+        <h2>Change password</h2>
+        <asp:Label ID="PasswordLabel" runat="server" AssociatedControlID="PasswordChange">Password:
+        <asp:RequiredFieldValidator ID="PasswordRequired" runat="server" ControlToValidate="PasswordChange" CssClass="field-validation-error" ErrorMessage="Required." ValidationGroup="changePassword"></asp:RequiredFieldValidator></asp:Label>
+        <asp:TextBox ID="PasswordChange" runat="server" TextMode="Password"></asp:TextBox>
+                        
+        <asp:Label ID="ConfirmPasswordLabel" runat="server" AssociatedControlID="ConfirmPasswordChange">Confirm Password:
+        <asp:RequiredFieldValidator ID="ConfirmPasswordRequired" runat="server" ControlToValidate="ConfirmPasswordChange" CssClass="field-validation-error" ErrorMessage="Required." ValidationGroup="changePassword"></asp:RequiredFieldValidator></asp:Label>
+        <asp:TextBox ID="ConfirmPasswordChange" runat="server" TextMode="Password"></asp:TextBox>
+
+        <asp:CompareValidator ID="PasswordCompare" runat="server" ControlToCompare="PasswordChange" ControlToValidate="ConfirmPasswordChange" Display="Dynamic" 
+                            ErrorMessage="The Password and Confirmation Password must match." ValidationGroup="changePassword"></asp:CompareValidator>
+
+        <asp:Button ID="ChangePassword" runat="server" Text="Change" OnClick="ChangePassword_Click" />
     </section>
 </asp:Content>
