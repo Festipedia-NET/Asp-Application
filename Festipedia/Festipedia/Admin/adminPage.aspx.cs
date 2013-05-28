@@ -23,7 +23,6 @@ namespace Festipedia.Admin
 
         protected void CreateUser_CreatedUser(object sender, EventArgs e)
         {
-            successLabel.Text = "De user is toegevoegd.";
             string continueUrl =  "~/Admin/adminPage.aspx";
             Response.Redirect(continueUrl);
         }
