@@ -130,6 +130,7 @@
     <Content Include="Account\Register.aspx" />
     <Content Include="Account\RegisterExternalLogin.aspx" />
     <Content Include="Admin\adminPage.aspx" />
+    <Content Include="BandDetail.aspx" />
     <Content Include="Bands.aspx" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
@@ -191,6 +192,7 @@
     <Content Include="Edit\add.aspx" />
     <Content Include="Edit\edit.aspx" />
     <Content Include="Edit\editPage.aspx" />
+    <Content Include="FestiDetail.aspx" />
     <Content Include="Festivals.aspx" />
     <Content Include="Images\accent.png" />
     <Content Include="Images\be-ico.png" />
@@ -303,6 +305,13 @@
     <Compile Include="Account\RegisterExternalLogin.aspx.designer.cs">
       <DependentUpon>RegisterExternalLogin.aspx</DependentUpon>
     </Compile>
+    <Compile Include="BandDetail.aspx.cs">
+      <DependentUpon>BandDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BandDetail.aspx.designer.cs">
+      <DependentUpon>BandDetail.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Bands.aspx.cs">
       <DependentUpon>Bands.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -354,6 +363,13 @@
     </Compile>
     <Compile Include="Edit\editPage.aspx.designer.cs">
       <DependentUpon>editPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FestiDetail.aspx.cs">
+      <DependentUpon>FestiDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FestiDetail.aspx.designer.cs">
+      <DependentUpon>FestiDetail.aspx</DependentUpon>
     </Compile>
     <Compile Include="Festivals.aspx.cs">
       <DependentUpon>Festivals.aspx</DependentUpon>
