@@ -349,6 +349,7 @@
     </Compile>
     <Compile Include="Edit\editPage.aspx.cs">
       <DependentUpon>editPage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="FestiDetail.aspx.cs">
       <DependentUpon>FestiDetail.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
