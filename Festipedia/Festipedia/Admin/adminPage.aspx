@@ -7,27 +7,36 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
     <section class="contentLeft">
         <h2>Add user</h2>
-        <br />
-        <asp:CreateUserWizard ID="CreateUserWizard1" runat="server" ActiveStepIndex="1">
+        <asp:Label ID="successLabel" runat="server" Text=""></asp:Label>
+        <asp:CreateUserWizard ID="CreateUserWizard1" runat="server" LoginCreatedUser="false" OnCreatedUser="CreateUser_CreatedUser">
             <WizardSteps>
-                <asp:CreateUserWizardStep runat="server" />
-                <asp:CompleteWizardStep runat="server">
+                <asp:CreateUserWizardStep ID="CreateUserWizardStep1" runat="server">
                     <ContentTemplate>
-                        <table>
-                            <tr>
-                                <td align="center">Complete</td>
-                            </tr>
-                            <tr>
-                                <td>Your account has been successfully created.</td>
-                            </tr>
-                            <tr>
-                                <td align="right">
-                                    <asp:Button ID="ContinueButton" runat="server" CausesValidation="False" CommandName="Continue" Text="Continue" ValidationGroup="CreateUserWizard1" />
-                                </td>
-                            </tr>
-                        </table>
+                        <asp:Label ID="UserNameLabel" runat="server" AssociatedControlID="UserName">User Name:
+                        <asp:RequiredFieldValidator ID="UserNameRequired" runat="server" ControlToValidate="UserName" CssClass="field-validation-error"
+                            ErrorMessage="Required." ValidationGroup="CreateUserWizard1"></asp:RequiredFieldValidator></asp:Label>
+                        <asp:TextBox ID="UserName" runat="server"></asp:TextBox>
+                                    
+                        <asp:Label ID="PasswordLabel" runat="server" AssociatedControlID="Password">Password:
+                        <asp:RequiredFieldValidator ID="PasswordRequired" runat="server" ControlToValidate="Password" CssClass="field-validation-error"
+                            ErrorMessage="Required." ValidationGroup="CreateUserWizard1"></asp:RequiredFieldValidator></asp:Label>
+                        <asp:TextBox ID="Password" runat="server" TextMode="Password"></asp:TextBox>
+                        
+                        <asp:Label ID="ConfirmPasswordLabel" runat="server" AssociatedControlID="ConfirmPassword">Confirm Password:
+                        <asp:RequiredFieldValidator ID="ConfirmPasswordRequired" runat="server" ControlToValidate="ConfirmPassword" CssClass="field-validation-error"
+                            ErrorMessage="Required." ValidationGroup="CreateUserWizard1"></asp:RequiredFieldValidator></asp:Label>
+                        <asp:TextBox ID="ConfirmPassword" runat="server" TextMode="Password"></asp:TextBox>
+                        
+                        <asp:Label ID="EmailLabel" runat="server" AssociatedControlID="Email">E-mail:
+                        <asp:RequiredFieldValidator ID="EmailRequired" runat="server" ControlToValidate="Email" CssClass="field-validation-error"
+                            ErrorMessage="Required." ValidationGroup="CreateUserWizard1"></asp:RequiredFieldValidator></asp:Label>
+                        <asp:TextBox ID="Email" runat="server"></asp:TextBox>
+
+                        <asp:CompareValidator ID="PasswordCompare" runat="server" ControlToCompare="Password" ControlToValidate="ConfirmPassword" Display="Dynamic" 
+                            ErrorMessage="The Password and Confirmation Password must match." ValidationGroup="CreateUserWizard1"></asp:CompareValidator>
                     </ContentTemplate>
-                </asp:CompleteWizardStep>
+                </asp:CreateUserWizardStep>
+                <asp:CompleteWizardStep></asp:CompleteWizardStep>
             </WizardSteps>
         </asp:CreateUserWizard>
     </section>

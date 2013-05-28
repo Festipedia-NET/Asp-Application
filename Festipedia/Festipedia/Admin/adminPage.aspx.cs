@@ -20,5 +20,13 @@ namespace Festipedia.Admin
                 RoleList.DataBind();
             }
         }
+
+        protected void CreateUser_CreatedUser(object sender, EventArgs e)
+        {
+            successLabel.Text = "De user is toegevoegd.";
+        }
+
     }
+
+
 }
