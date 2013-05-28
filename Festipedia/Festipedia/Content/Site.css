@@ -490,6 +490,10 @@ fieldset {
         margin-right: 4px;
     }
 
+.dropList {
+    width: 200px;
+}
+
 /* info and errors */
 .message-info {
     border: 1px solid;

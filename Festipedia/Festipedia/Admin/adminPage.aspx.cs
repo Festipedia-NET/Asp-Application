@@ -24,6 +24,16 @@ namespace Festipedia.Admin
         protected void CreateUser_CreatedUser(object sender, EventArgs e)
         {
             successLabel.Text = "De user is toegevoegd.";
+            string continueUrl =  "~/Admin/adminPage.aspx";
+            Response.Redirect(continueUrl);
+        }
+
+        protected void RoleList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            String selectRole = RoleList.Text;
+            String[] allUsers = Roles.GetUsersInRole(selectRole);
+            UserRoleList.DataSource = allUsers.ToList();
+            UserRoleList.DataBind();
         }
 
     }

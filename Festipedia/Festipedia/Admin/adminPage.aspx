@@ -8,7 +8,7 @@
     <section class="contentLeft">
         <h2>Add user</h2>
         <asp:Label ID="successLabel" runat="server" Text=""></asp:Label>
-        <asp:CreateUserWizard ID="CreateUserWizard1" runat="server" LoginCreatedUser="false" OnCreatedUser="CreateUser_CreatedUser">
+        <asp:CreateUserWizard ID="CreateUserWizard1" runat="server" LoginCreatedUser="False" OnCreatedUser="CreateUser_CreatedUser">
             <WizardSteps>
                 <asp:CreateUserWizardStep ID="CreateUserWizardStep1" runat="server">
                     <ContentTemplate>
@@ -36,12 +36,18 @@
                             ErrorMessage="The Password and Confirmation Password must match." ValidationGroup="CreateUserWizard1"></asp:CompareValidator>
                     </ContentTemplate>
                 </asp:CreateUserWizardStep>
-                <asp:CompleteWizardStep></asp:CompleteWizardStep>
+                <asp:CompleteWizardStep>
+                    <ContentTemplate>
+                        Complete
+                        <asp:Button ID="ContinueButton" runat="server" CausesValidation="False" CommandName="Continue" Text="Continue" ValidationGroup="CreateUserWizard1" />
+                    </ContentTemplate>
+                </asp:CompleteWizardStep>
             </WizardSteps>
         </asp:CreateUserWizard>
     </section>
     <section class="contentRight">
         <h2>Manage user</h2>
-        <asp:DropDownList id="RoleList" runat="server" AutoPostBack="true"></asp:DropDownList>
+        <asp:DropDownList class="dropList" id="RoleList" runat="server" AutoPostBack="true" OnSelectedIndexChanged="RoleList_SelectedIndexChanged"></asp:DropDownList><br />
+        <asp:DropDownList class="dropList" id="UserRoleList" runat="server" AutoPostBack="true"></asp:DropDownList>
     </section>
 </asp:Content>
