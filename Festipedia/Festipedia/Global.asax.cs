@@ -33,7 +33,7 @@ namespace Festipedia
         void Session_Start(object sender, EventArgs e)
         {
             //set english as default startup language
-            Session["MyCulture"] = "nl-be";
+            Session["MyCulture"] = "nl-BE";
         }
     }
 }
