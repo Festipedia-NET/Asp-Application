@@ -367,7 +367,7 @@ aside {
 }
 
 /* login page */
-#loginForm, .contentLeft {
+#loginForm {
     border-right: solid 2px #c8c8c8;
     float: left;
     width: 55%;
@@ -378,7 +378,7 @@ aside {
         margin-left: 15px;
     }
 
-#socialLoginForm, .contentRight {
+#socialLoginForm {
     margin-left: 40px;
     float: left;
     width: 40%;
@@ -395,10 +395,6 @@ fieldset.open-auth-providers {
     fieldset.open-auth-providers button {
         margin-bottom: 12px;
     }
-
-.visible123 {
-    visibility: visible;
-}
     
 /* contact */
 .contact h3 {
@@ -489,10 +485,6 @@ fieldset {
         padding: 4px;
         margin-right: 4px;
     }
-
-.dropList {
-    width: 200px;
-}
 
 /* info and errors */
 .message-info {
@@ -728,7 +720,3 @@ tr.pager td {
     width: 40px;
 }
 
-
-.content-title {
-    margin-bottom: 20px;
-}

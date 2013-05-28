@@ -9,7 +9,7 @@ using System.Web.UI.WebControls;
 
 namespace Festipedia
 {
-    public partial class Bands : BasePage
+    public partial class Bands : Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
