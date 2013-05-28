@@ -129,7 +129,7 @@
     <Content Include="Account\OpenAuthProviders.ascx" />
     <Content Include="Account\Register.aspx" />
     <Content Include="Account\RegisterExternalLogin.aspx" />
-    <Content Include="BandDetail.aspx" />
+    <Content Include="Admin\adminPage.aspx" />
     <Content Include="Bands.aspx" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
@@ -191,7 +191,6 @@
     <Content Include="Edit\add.aspx" />
     <Content Include="Edit\edit.aspx" />
     <Content Include="Edit\editPage.aspx" />
-    <Content Include="FestiDetail.aspx" />
     <Content Include="Festivals.aspx" />
     <Content Include="Images\accent.png" />
     <Content Include="Images\be-ico.png" />
@@ -212,6 +211,8 @@
     <Content Include="Images\uk-ico.png" />
     <Content Include="Images\vs-ico.png" />
     <Content Include="packages.config" />
+    <Content Include="Admin\web.config" />
+    <Content Include="Edit\web.config" />
     <None Include="Scripts\jquery-1.7.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.7.1.js" />
     <Content Include="Scripts\jquery-1.7.1.min.js" />
@@ -248,6 +249,13 @@
     <Content Include="Bundle.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin\adminPage.aspx.cs">
+      <DependentUpon>adminPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\adminPage.aspx.designer.cs">
+      <DependentUpon>adminPage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="App_GlobalResources\Resource.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -294,13 +302,6 @@
     </Compile>
     <Compile Include="Account\RegisterExternalLogin.aspx.designer.cs">
       <DependentUpon>RegisterExternalLogin.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="BandDetail.aspx.cs">
-      <DependentUpon>BandDetail.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="BandDetail.aspx.designer.cs">
-      <DependentUpon>BandDetail.aspx</DependentUpon>
     </Compile>
     <Compile Include="Bands.aspx.cs">
       <DependentUpon>Bands.aspx</DependentUpon>
@@ -349,12 +350,10 @@
     </Compile>
     <Compile Include="Edit\editPage.aspx.cs">
       <DependentUpon>editPage.aspx</DependentUpon>
-    <Compile Include="FestiDetail.aspx.cs">
-      <DependentUpon>FestiDetail.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="FestiDetail.aspx.designer.cs">
-      <DependentUpon>FestiDetail.aspx</DependentUpon>
+    <Compile Include="Edit\editPage.aspx.designer.cs">
+      <DependentUpon>editPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Festivals.aspx.cs">
       <DependentUpon>Festivals.aspx</DependentUpon>

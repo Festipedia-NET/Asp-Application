@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Festival Details" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="FestiDetail.aspx.cs" Inherits="Festipedia.FestiDetail" %>
+﻿<%@ Page Title="Festivals" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="FestiDetail.aspx.cs" Inherits="Festipedia.Festivals" %>
 
 <asp:Content runat="server" ID="FeaturedContent" ContentPlaceHolderID="FeaturedContent">
     <section class="featured">
@@ -8,28 +8,5 @@
     </section>
 </asp:Content>
 <asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
-    
-
-
-
-    <asp:ListBox ID="ListBox1" runat="server" AutoPostBack="True" CssClass="listbox" DataSourceID="SqlDataSource1" DataTextField="fest_naam" DataValueField="fest_id" Rows="15" Width="200px"></asp:ListBox>
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:groep15_festivalsContext %>" SelectCommand="SELECT [fest_id], [fest_naam] FROM [Festivals]"></asp:SqlDataSource>
-    <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" CssClass="festview md" DataKeyNames="fest_id" DataSourceID="SqlDataSource2" Height="50px" Width="125px">
-        <Fields>
-            <asp:BoundField DataField="fest_id" HeaderText="ID" InsertVisible="False" ReadOnly="True" SortExpression="fest_id" />
-            <asp:BoundField DataField="fest_naam" HeaderText="Naam" SortExpression="fest_naam" />
-            <asp:BoundField DataField="fest_locatie" HeaderText="Locatie" SortExpression="fest_locatie" />
-            <asp:BoundField DataField="fest_datum" HeaderText="Datum" SortExpression="fest_datum" />
-            <asp:BoundField DataField="fest_duur" HeaderText="Duur" SortExpression="fest_duur" />
-        </Fields>
-    </asp:DetailsView>
-    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:groep15_festivalsContext %>" SelectCommand="SELECT * FROM [Festivals] WHERE ([fest_id] = @fest_id)">
-        <SelectParameters>
-            <asp:ControlParameter ControlID="ListBox1" Name="fest_id" PropertyName="SelectedValue" Type="Int32" />
-        </SelectParameters>
-    </asp:SqlDataSource>
-    
-
-
-
+      
 </asp:Content>
