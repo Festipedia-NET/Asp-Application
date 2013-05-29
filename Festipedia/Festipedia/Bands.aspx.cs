@@ -13,18 +13,26 @@ namespace Festipedia
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            using (var db = new groep15_festivalsContext())
+            try
             {
-                var query = from b in db.Bands orderby b.band_naam select b;
-                bandView.DataSource = query.ToList();
-                bandView.DataBind();
+                using (var db = new groep15_festivalsContext())
+                {
+                    var query = from b in db.Bands orderby b.band_naam select b;
+                    bandView.DataSource = query.ToList();
+                    bandView.DataBind();
+                }
+            }
+            catch (Exception ex)
+            {
+                Response.Redirect("~/errorPage.aspx");
             }
         }
 
-        /*
-         * sorteren
-         * */
-
+        /// <summary>
+        /// tabel sorteren
+        /// </summary>
+        /// <param name="sortDirection"></param>
+        /// <returns></returns>
         private string ConvertSortDirectionToSql(SortDirection sortDirection)
         {
             string newSortDirection = String.Empty;
@@ -43,18 +51,22 @@ namespace Festipedia
             return newSortDirection;
         }
 
-        /*
-        * Zorgen dat de inhoud opnieuw gebind word na selectie
-        * */
+        /// <summary>
+        ///  Zorgen dat de inhoud opnieuw gebind word na selectie
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void bandView_PageIndexChanging(object sender, GridViewPageEventArgs e)
         {
             bandView.PageIndex = e.NewPageIndex;
             bandView.DataBind();
         }
 
-        /*
-        * sorteren
-        * */
+        /// <summary>
+        /// Bind gesorteerde waarden aan de tabel
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void bandView_Sorting(object sender, GridViewSortEventArgs e)
         {
             DataTable dataTable = bandView.DataSource as DataTable;
