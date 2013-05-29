@@ -16,8 +16,6 @@ namespace Festipedia.Edit
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            Page.ClientScript.RegisterForEventValidation(this.UniqueID);
-
             using (var db = new groep15_festivalsContext())
             {
                 var query = from f in db.Festivals orderby f.fest_datum select f;
@@ -26,15 +24,9 @@ namespace Festipedia.Edit
             }
         }
 
-        protected override void Render(HtmlTextWriter writer)
-        {
-            Page.ClientScript.RegisterForEventValidation(.UniqueID);
-            base.Render(writer);
-        }
-
         protected void festView_RowDeleting(object sender, GridViewDeleteEventArgs e)
         {
-                        /**
+              /**
              * Verwijderen 
              */
 
@@ -93,7 +85,33 @@ namespace Festipedia.Edit
             DataBind();
         }
 
+        protected void Insert_Click(object sender, EventArgs e)
+        {
+            String festName = ((Label)festView.FooterRow.FindControl("TextBox8")).Text;
+            String festLoc = ((Label)festView.FooterRow.FindControl("TextBox7")).Text;
+            String festDatumT = ((Label)festView.FooterRow.FindControl("TextBox6")).Text;
+            DateTime festDatum = Convert.ToDateTime(festDatumT);
 
+            String festDuurT = ((Label)festView.FooterRow.FindControl("TextBox5")).Text;
+            int festDuur = Convert.ToInt32(festDuurT);
+
+            using (var db = new groep15_festivalsContext())
+            {
+
+                Festival fest = new Festival();
+                fest.fest_naam = festName;
+                fest.fest_locatie = festLoc;
+                fest.fest_datum = festDatum;
+                fest.fest_duur = festDuur;
+
+                db.Festivals.Add(fest);
+
+                db.SaveChanges();
+            }
+
+            festView.EditIndex = -1;
+            DataBind();
+        }
 
     }
 }

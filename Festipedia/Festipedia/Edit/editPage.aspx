@@ -20,6 +20,9 @@
                     <EditItemTemplate>
                         <asp:Label ID="Label10" runat="server" Text='<%# Eval("fest_id") %>'></asp:Label>
                     </EditItemTemplate>
+                    <FooterTemplate>
+                        <asp:Button ID="btnInsert" runat="server" OnClick="Insert_Click" Text="Insert" />
+                    </FooterTemplate>
                     <ItemTemplate>
                         <asp:Label ID="Label5" runat="server" Text='<%# Eval("fest_id") %>'></asp:Label>
                     </ItemTemplate>
@@ -28,6 +31,9 @@
                     <EditItemTemplate>
                         <asp:TextBox ID="TextBox1" runat="server" Text='<%# Eval("fest_naam") %>' Width="144px"></asp:TextBox>
                     </EditItemTemplate>
+                    <FooterTemplate>
+                        <asp:TextBox ID="TextBox8" runat="server"></asp:TextBox>
+                    </FooterTemplate>
                     <ItemTemplate>
                         <asp:Label ID="Label6" runat="server" Text='<%# Eval("fest_naam") %>'></asp:Label>
                     </ItemTemplate>
@@ -36,6 +42,9 @@
                     <EditItemTemplate>
                         <asp:TextBox ID="TextBox2" runat="server" Text='<%# Eval("fest_locatie") %>'></asp:TextBox>
                     </EditItemTemplate>
+                    <FooterTemplate>
+                        <asp:TextBox ID="TextBox7" runat="server"></asp:TextBox>
+                    </FooterTemplate>
                     <ItemTemplate>
                         <asp:Label ID="Label7" runat="server" Text='<%# Eval("fest_locatie") %>'></asp:Label>
                     </ItemTemplate>
@@ -44,6 +53,9 @@
                     <EditItemTemplate>
                         <asp:TextBox ID="TextBox3" runat="server" Text='<%# Eval("fest_datum") %>'></asp:TextBox>
                     </EditItemTemplate>
+                    <FooterTemplate>
+                        <asp:TextBox ID="TextBox6" runat="server"></asp:TextBox>
+                    </FooterTemplate>
                     <ItemTemplate>
                         <asp:Label ID="Label8" runat="server" Text='<%# Eval("fest_datum") %>'></asp:Label>
                     </ItemTemplate>
@@ -52,12 +64,16 @@
                     <EditItemTemplate>
                         <asp:TextBox ID="TextBox4" runat="server" Text='<%# Eval("fest_duur") %>'></asp:TextBox>
                     </EditItemTemplate>
+                    <FooterTemplate>
+                        <asp:TextBox ID="TextBox5" runat="server"></asp:TextBox>
+                    </FooterTemplate>
                     <ItemTemplate>
                         <asp:Label ID="Label9" runat="server" Text='<%# Eval("fest_duur") %>'></asp:Label>
                     </ItemTemplate>
                 </asp:TemplateField>
                 <asp:CommandField ButtonType="Button" ShowEditButton="True" />
                 <asp:CommandField ButtonType="Button" ShowDeleteButton="True" />
+                <asp:TemplateField FooterText="Add"></asp:TemplateField>
             </Columns>
         </asp:GridView>
         <br />
