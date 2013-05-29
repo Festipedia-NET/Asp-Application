@@ -45,12 +45,13 @@ namespace Festipedia.Admin
         {
             String selectedUser = UserList.SelectedValue;
             String[] selectedUsersRoles = Roles.GetRolesForUser(selectedUser);
-            for (int i = 0; i < UsersRoleList.Items.Count-1; i++ )
+            for (int i = 0; i < UsersRoleList.Items.Count; i++ )
             {
                 CheckBox roleCheckbox = UsersRoleList.Items[i].FindControl("RoleCheckBox") as CheckBox;
                 if(selectedUsersRoles.Contains(roleCheckbox.Text))
                 {
                     roleCheckbox.Checked = true;
+                    System.Diagnostics.Debug.WriteLine("Variabele: User: " + selectedUser + " Role: " + roleCheckbox.Text);
                 }
                 else
                 {
@@ -61,11 +62,7 @@ namespace Festipedia.Admin
 
         protected void UserList_SelectedIndexChanged(object sender, EventArgs e)
         {
-            String selectedUser = UserList.SelectedValue;
-            if (!IsPostBack)
-            {
-                CheckRolesForSelectedUser();
-            }
+            CheckRolesForSelectedUser();
         }
 
     }

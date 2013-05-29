@@ -42,7 +42,7 @@
     </section>
     <section class="contentRight">
         <h2>Manage user</h2>
-        <asp:DropDownList class="dropList" id="UserList" runat="server" AutoPostBack="false" OnTextChanged="UserList_SelectedIndexChanged"></asp:DropDownList><br /><br />
+        <asp:DropDownList class="dropList" id="UserList" runat="server" AutoPostBack="true" OnSelectedIndexChanged="UserList_SelectedIndexChanged"></asp:DropDownList><br /><br />
         <asp:Repeater ID="UsersRoleList" runat="server">      
             <ItemTemplate>           
                 <asp:CheckBox runat="server" ID="RoleCheckBox" AutoPostBack="true" Text='<%# Container.DataItem %>' />
