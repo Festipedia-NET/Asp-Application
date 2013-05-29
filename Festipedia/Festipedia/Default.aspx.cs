@@ -9,8 +9,18 @@ using Festipedia.Models;
 
 namespace Festipedia
 {
+    /// <summary>
+    /// Klasse om elementen in te laden of te veranderen van de asp pagina.
+    /// Of code uit te voeren.
+    /// </summary>
     public partial class _Default : BasePage
     {
+
+        /// <summary>
+        /// Methode uitgevoerd als de pagina geladen wordt.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -18,26 +28,19 @@ namespace Festipedia
 
         }
 
-    
 
-
-        // haalt de data voor de listview uit de models van entity framework en neemt er de 5 eerste van van de festivals die nog moeten komen.
+       /// <summary>
+       /// Methode om de listview op te vullen met de data die we nodig hebben. We hebben hiervoor geen Wizard gebruikt.
+       /// </summary>
+       /// <returns>returns een lijst met de verschillende festivals met hun gegevens</returns>
 
         public List<Festipedia.Models.Festival> getListData(){
 
             using (var db = new groep15_festivalsContext())
             {
-                DateTime now = new DateTime();
-                DateTime dan = new DateTime(); // deze lijn moet nog weg.
+                DateTime now = new DateTime();            
                 now = DateTime.Now;
-
-                // deze 3 lijnen moeten nog weg.
-                System.Diagnostics.Debug.WriteLine("DATE = " + Convert.ToString(now));
-                dan = now.AddDays(30);
-                System.Diagnostics.Debug.WriteLine("DATE + days = " + Convert.ToString(dan));
-                // tot hier
-               
-                var query = from f in db.Festivals where f.fest_datum > dan orderby f.fest_datum  select f;
+                var query = from f in db.Festivals where f.fest_datum > now orderby f.fest_datum  select f;
                 var limitQuery = query.Take(5); // neemt 5 eerste results van de query
                 return limitQuery.ToList();
             }
