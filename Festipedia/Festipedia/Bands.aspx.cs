@@ -21,6 +21,10 @@ namespace Festipedia
             }
         }
 
+        /*
+         * sorteren
+         * */
+
         private string ConvertSortDirectionToSql(SortDirection sortDirection)
         {
             string newSortDirection = String.Empty;
@@ -39,12 +43,18 @@ namespace Festipedia
             return newSortDirection;
         }
 
+        /*
+        * Zorgen dat de inhoud opnieuw gebind word na selectie
+        * */
         protected void bandView_PageIndexChanging(object sender, GridViewPageEventArgs e)
         {
             bandView.PageIndex = e.NewPageIndex;
             bandView.DataBind();
         }
 
+        /*
+        * sorteren
+        * */
         protected void bandView_Sorting(object sender, GridViewSortEventArgs e)
         {
             DataTable dataTable = bandView.DataSource as DataTable;
