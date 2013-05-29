@@ -106,23 +106,16 @@ namespace Festipedia.Admin
         /// <param name="e"></param>
         protected void changeUser_Click(object sender, EventArgs e)
         {
-            try
-            {
-                String selectedUser = UserList.SelectedValue;
-                MembershipUser user = Membership.GetUser(selectedUser);
-                String email = EmailChange.Text;
-                user.Email = email;
+            String selectedUser = UserList.SelectedValue;
+            MembershipUser user = Membership.GetUser(selectedUser);
+            String email = EmailChange.Text;
+            user.Email = email;
 
-                if (!String.IsNullOrEmpty(PasswordChange.Text))
-                {
-                    user.ChangePassword(user.ResetPassword(), PasswordChange.Text);
-                }
-                Membership.UpdateUser(user);
-            }
-            catch (System.Configuration.Provider.ProviderException ex)
+            if (!String.IsNullOrEmpty(PasswordChange.Text))
             {
-                Response.Redirect("~/errorPage.aspx");
+                user.ChangePassword(user.ResetPassword(), PasswordChange.Text);
             }
+            Membership.UpdateUser(user);
         }
 
         /// <summary>
