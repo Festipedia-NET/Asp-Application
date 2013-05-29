@@ -69,12 +69,12 @@ namespace Festipedia.Edit
             String idT = ((Label)festView.Rows[e.RowIndex-1].FindControl("Label5")).Text;
             int id = Convert.ToInt32(idT);
 
-            String festName = ((Label)festView.Rows[e.RowIndex-1].FindControl("TextBox1")).Text;
-            String festLoc = ((Label)festView.Rows[e.RowIndex-1].FindControl("TextBox2")).Text;
-            String festDatumT = ((Label)festView.Rows[e.RowIndex-1].FindControl("TextBox3")).Text;
-            
+            String festName = ((TextBox)festView.Rows[e.RowIndex-1].FindControl("TextBox1")).Text;
+            String festLoc = ((TextBox)festView.Rows[e.RowIndex - 1].FindControl("TextBox2")).Text;
+            String festDatumT = ((TextBox)festView.Rows[e.RowIndex - 1].FindControl("TextBox3")).Text;
 
-            String festDuurT = ((Label)festView.Rows[e.RowIndex].FindControl("TextBox4")).Text;
+
+            String festDuurT = ((TextBox)festView.Rows[e.RowIndex].FindControl("TextBox4")).Text;
             int festDuur = Int32.Parse(festDuurT);
 
             using (var db = new groep15_festivalsContext())
@@ -110,8 +110,9 @@ namespace Festipedia.Edit
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        protected void Insert_Click(object sender, EventArgs e)
+        protected void Insert_Click(object sender, GridViewCommandEventArgs e)
         {
+
             TextBox txtFestName = festView.FooterRow.FindControl("TextBox8") as TextBox;
             string festName = txtFestName.Text;
             TextBox txtFestLoc = festView.FooterRow.FindControl("TextBox7") as TextBox;
@@ -139,6 +140,11 @@ namespace Festipedia.Edit
 
             festView.EditIndex = -1;
             festView.DataBind();
+        }
+
+        protected void festView_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+
         }
 
     }
