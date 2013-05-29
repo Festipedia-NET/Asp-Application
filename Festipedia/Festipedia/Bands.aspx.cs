@@ -11,6 +11,11 @@ namespace Festipedia
 {
     public partial class Bands : BasePage
     {
+        /// <summary>
+        /// Alle bands worden uit de databank gehaald
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void Page_Load(object sender, EventArgs e)
         {
             try

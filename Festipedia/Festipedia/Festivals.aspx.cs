@@ -11,6 +11,11 @@ namespace Festipedia
 {
     public partial class Festivals : BasePage
     {
+        /// <summary>
+        /// Alle festivals worden geladen
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void Page_Load(object sender, EventArgs e)
         {
             try

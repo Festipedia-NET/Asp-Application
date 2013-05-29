@@ -30,9 +30,13 @@ namespace Festipedia
 
         }
 
+        /// <summary>
+        /// Default language = NL
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         void Session_Start(object sender, EventArgs e)
         {
-            //set english as default startup language
             Session["MyCulture"] = "nl-BE";
         }
     }

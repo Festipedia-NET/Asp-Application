@@ -11,6 +11,10 @@ namespace Festipedia
     {
         private const string m_DefaultCulture = "nl-BE";
 
+        /// <summary>
+        /// Override de Page Class
+        /// Voegt onderdelen toe die nodig zijn voor de language app
+        /// </summary>
         protected override void InitializeCulture()
         {
             //retrieve culture information from session

@@ -16,7 +16,11 @@ namespace Festipedia
 
         protected void Page_Init(object sender, EventArgs e)
         {
-            // The code below helps to protect against XSRF attacks
+            /// <summary>
+            /// The code below helps to protect against XSRF attacks
+            /// </summary>
+            /// <param name="sender"></param>
+            /// <param name="e"></param>
             var requestCookie = Request.Cookies[AntiXsrfTokenKey];
             Guid requestCookieGuidValue;
             if (requestCookie != null && Guid.TryParse(requestCookie.Value, out requestCookieGuidValue))
@@ -46,6 +50,10 @@ namespace Festipedia
             Page.PreLoad += master_Page_PreLoad;
         }
 
+        /// <summary>
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void master_Page_PreLoad(object sender, EventArgs e)
         {
             if (!IsPostBack)
