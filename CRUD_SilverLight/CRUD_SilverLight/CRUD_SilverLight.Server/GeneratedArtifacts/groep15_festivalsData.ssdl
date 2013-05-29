@@ -1,0 +1,328 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="groep15_festivalsDataStore" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="groep15_festivalsDataStore">
+    <EntitySet Name="Bands" EntityType="groep15_festivalsDataStore.Band" store:Type="Tables" Schema="dbo" Table="Bands" />
+    <EntitySet Name="BandsPerFestivals" EntityType="groep15_festivalsDataStore.BandsPerFestival" store:Type="Tables" Schema="dbo" Table="BandsPerFestival" />
+    <EntitySet Name="Campings" EntityType="groep15_festivalsDataStore.Camping" store:Type="Tables" Schema="dbo" Table="Campings" />
+    <EntitySet Name="CampingsPerFestivals" EntityType="groep15_festivalsDataStore.CampingsPerFestival" store:Type="Tables" Schema="dbo" Table="CampingsPerFestival" />
+    <EntitySet Name="Faciliteitens" EntityType="groep15_festivalsDataStore.Faciliteiten" store:Type="Tables" Schema="dbo" Table="Faciliteiten" />
+    <EntitySet Name="FacPerCamps" EntityType="groep15_festivalsDataStore.FacPerCamp" store:Type="Tables" Schema="dbo" Table="FacPerCamp" />
+    <EntitySet Name="Festivals" EntityType="groep15_festivalsDataStore.Festival" store:Type="Tables" Schema="dbo" Table="Festivals" />
+    <EntitySet Name="GeregistreerdeGebruikers" EntityType="groep15_festivalsDataStore.GeregistreerdeGebruiker" store:Type="Tables" Schema="dbo" Table="GeregistreerdeGebruikers" />
+    <EntitySet Name="Podias" EntityType="groep15_festivalsDataStore.Podia" store:Type="Tables" Schema="dbo" Table="Podia" />
+    <EntitySet Name="sysdiagrams" EntityType="groep15_festivalsDataStore.sysdiagram" store:Type="Tables" Schema="dbo" Table="sysdiagrams" />
+    <EntitySet Name="Tickets" EntityType="groep15_festivalsDataStore.Ticket" store:Type="Tables" Schema="dbo" Table="Tickets" />
+    <EntitySet Name="Tickettypes" EntityType="groep15_festivalsDataStore.Tickettype" store:Type="Tables" Schema="dbo" Table="Tickettypes" />
+    <EntitySet Name="TickettypesPerFestivals" EntityType="groep15_festivalsDataStore.TickettypesPerFestival" store:Type="Tables" Schema="dbo" Table="TickettypesPerFestival" />
+    <AssociationSet Name="FK_BandsPerFestival_Bands" Association="groep15_festivalsDataStore.FK_BandsPerFestival_Bands">
+      <End Role="Bands" EntitySet="Bands" />
+      <End Role="BandsPerFestival" EntitySet="BandsPerFestivals" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BandsPerFestival_Festivals" Association="groep15_festivalsDataStore.FK_BandsPerFestival_Festivals">
+      <End Role="Festivals" EntitySet="Festivals" />
+      <End Role="BandsPerFestival" EntitySet="BandsPerFestivals" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BandsPerFestival_Podia" Association="groep15_festivalsDataStore.FK_BandsPerFestival_Podia">
+      <End Role="Podia" EntitySet="Podias" />
+      <End Role="BandsPerFestival" EntitySet="BandsPerFestivals" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CampingsPerFestival_Campings" Association="groep15_festivalsDataStore.FK_CampingsPerFestival_Campings">
+      <End Role="Campings" EntitySet="Campings" />
+      <End Role="CampingsPerFestival" EntitySet="CampingsPerFestivals" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CampingsPerFestival_Festivals" Association="groep15_festivalsDataStore.FK_CampingsPerFestival_Festivals">
+      <End Role="Festivals" EntitySet="Festivals" />
+      <End Role="CampingsPerFestival" EntitySet="CampingsPerFestivals" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FacPerCamp_Campings" Association="groep15_festivalsDataStore.FK_FacPerCamp_Campings">
+      <End Role="Campings" EntitySet="Campings" />
+      <End Role="FacPerCamp" EntitySet="FacPerCamps" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FacPerCamp_Faciliteiten" Association="groep15_festivalsDataStore.FK_FacPerCamp_Faciliteiten">
+      <End Role="Faciliteiten" EntitySet="Faciliteitens" />
+      <End Role="FacPerCamp" EntitySet="FacPerCamps" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tickets_Festivals" Association="groep15_festivalsDataStore.FK_Tickets_Festivals">
+      <End Role="Festivals" EntitySet="Festivals" />
+      <End Role="Tickets" EntitySet="Tickets" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tickets_GeregistreerdeGebruikers" Association="groep15_festivalsDataStore.FK_Tickets_GeregistreerdeGebruikers">
+      <End Role="GeregistreerdeGebruikers" EntitySet="GeregistreerdeGebruikers" />
+      <End Role="Tickets" EntitySet="Tickets" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tickets_Tickettypes" Association="groep15_festivalsDataStore.FK_Tickets_Tickettypes">
+      <End Role="Tickettypes" EntitySet="Tickettypes" />
+      <End Role="Tickets" EntitySet="Tickets" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TickettypesPerFestival_Festivals" Association="groep15_festivalsDataStore.FK_TickettypesPerFestival_Festivals">
+      <End Role="Festivals" EntitySet="Festivals" />
+      <End Role="TickettypesPerFestival" EntitySet="TickettypesPerFestivals" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TickettypesPerFestival_Tickettypes" Association="groep15_festivalsDataStore.FK_TickettypesPerFestival_Tickettypes">
+      <End Role="Tickettypes" EntitySet="Tickettypes" />
+      <End Role="TickettypesPerFestival" EntitySet="TickettypesPerFestivals" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Band">
+    <Key>
+      <PropertyRef Name="band_id" />
+    </Key>
+    <Property Name="band_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="band_naam" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="band_soortMuziek" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="band_url" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="BandsPerFestival">
+    <Key>
+      <PropertyRef Name="fest_id" />
+      <PropertyRef Name="band_id" />
+      <PropertyRef Name="datum" />
+    </Key>
+    <Property Name="fest_id" Type="int" Nullable="false" />
+    <Property Name="band_id" Type="int" Nullable="false" />
+    <Property Name="datum" Type="date" Nullable="false" />
+    <Property Name="uur" Type="time" Nullable="false" />
+    <Property Name="pod_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Camping">
+    <Key>
+      <PropertyRef Name="camp_id" />
+    </Key>
+    <Property Name="camp_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="camp_adres" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="camp_cap" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CampingsPerFestival">
+    <Key>
+      <PropertyRef Name="fest_id" />
+      <PropertyRef Name="camp_id" />
+    </Key>
+    <Property Name="fest_id" Type="int" Nullable="false" />
+    <Property Name="camp_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Faciliteiten">
+    <Key>
+      <PropertyRef Name="fac_id" />
+    </Key>
+    <Property Name="fac_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="fac_omschr" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="fac_eenhprijs" Type="numeric" Nullable="false" Scale="2" />
+  </EntityType>
+  <EntityType Name="FacPerCamp">
+    <Key>
+      <PropertyRef Name="camp_id" />
+      <PropertyRef Name="fac_id" />
+    </Key>
+    <Property Name="camp_id" Type="int" Nullable="false" />
+    <Property Name="fac_id" Type="int" Nullable="false" />
+    <Property Name="aantal" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Festival">
+    <Key>
+      <PropertyRef Name="fest_id" />
+    </Key>
+    <Property Name="fest_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="fest_naam" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="fest_locatie" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="fest_datum" Type="date" Nullable="false" />
+    <Property Name="fest_duur" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="GeregistreerdeGebruiker">
+    <Key>
+      <PropertyRef Name="gebr_id" />
+    </Key>
+    <Property Name="gebr_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="gebr_naam" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="gebr_adres" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="gebr_gebDat" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Podia">
+    <Key>
+      <PropertyRef Name="pod_id" />
+    </Key>
+    <Property Name="pod_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="pod_omschr" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="pod_locatie" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="Ticket">
+    <Key>
+      <PropertyRef Name="fest_id" />
+      <PropertyRef Name="gebr_id" />
+    </Key>
+    <Property Name="fest_id" Type="int" Nullable="false" />
+    <Property Name="gebr_id" Type="int" Nullable="false" />
+    <Property Name="ticket_datum" Type="date" Nullable="false" />
+    <Property Name="typ_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tickettype">
+    <Key>
+      <PropertyRef Name="typ_id" />
+    </Key>
+    <Property Name="typ_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="typ_omschr" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="typ_prijs" Type="numeric" Nullable="false" Scale="2" />
+  </EntityType>
+  <EntityType Name="TickettypesPerFestival">
+    <Key>
+      <PropertyRef Name="fest_id" />
+      <PropertyRef Name="typ_id" />
+    </Key>
+    <Property Name="fest_id" Type="int" Nullable="false" />
+    <Property Name="typ_id" Type="int" Nullable="false" />
+    <Property Name="aantal" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_BandsPerFestival_Bands">
+    <End Role="Bands" Type="groep15_festivalsDataStore.Band" Multiplicity="1" />
+    <End Role="BandsPerFestival" Type="groep15_festivalsDataStore.BandsPerFestival" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Bands">
+        <PropertyRef Name="band_id" />
+      </Principal>
+      <Dependent Role="BandsPerFestival">
+        <PropertyRef Name="band_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BandsPerFestival_Festivals">
+    <End Role="Festivals" Type="groep15_festivalsDataStore.Festival" Multiplicity="1" />
+    <End Role="BandsPerFestival" Type="groep15_festivalsDataStore.BandsPerFestival" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Festivals">
+        <PropertyRef Name="fest_id" />
+      </Principal>
+      <Dependent Role="BandsPerFestival">
+        <PropertyRef Name="fest_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BandsPerFestival_Podia">
+    <End Role="Podia" Type="groep15_festivalsDataStore.Podia" Multiplicity="1" />
+    <End Role="BandsPerFestival" Type="groep15_festivalsDataStore.BandsPerFestival" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Podia">
+        <PropertyRef Name="pod_id" />
+      </Principal>
+      <Dependent Role="BandsPerFestival">
+        <PropertyRef Name="pod_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CampingsPerFestival_Campings">
+    <End Role="Campings" Type="groep15_festivalsDataStore.Camping" Multiplicity="1" />
+    <End Role="CampingsPerFestival" Type="groep15_festivalsDataStore.CampingsPerFestival" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Campings">
+        <PropertyRef Name="camp_id" />
+      </Principal>
+      <Dependent Role="CampingsPerFestival">
+        <PropertyRef Name="camp_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CampingsPerFestival_Festivals">
+    <End Role="Festivals" Type="groep15_festivalsDataStore.Festival" Multiplicity="1" />
+    <End Role="CampingsPerFestival" Type="groep15_festivalsDataStore.CampingsPerFestival" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Festivals">
+        <PropertyRef Name="fest_id" />
+      </Principal>
+      <Dependent Role="CampingsPerFestival">
+        <PropertyRef Name="fest_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FacPerCamp_Campings">
+    <End Role="Campings" Type="groep15_festivalsDataStore.Camping" Multiplicity="1" />
+    <End Role="FacPerCamp" Type="groep15_festivalsDataStore.FacPerCamp" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Campings">
+        <PropertyRef Name="camp_id" />
+      </Principal>
+      <Dependent Role="FacPerCamp">
+        <PropertyRef Name="camp_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FacPerCamp_Faciliteiten">
+    <End Role="Faciliteiten" Type="groep15_festivalsDataStore.Faciliteiten" Multiplicity="1" />
+    <End Role="FacPerCamp" Type="groep15_festivalsDataStore.FacPerCamp" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Faciliteiten">
+        <PropertyRef Name="fac_id" />
+      </Principal>
+      <Dependent Role="FacPerCamp">
+        <PropertyRef Name="fac_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tickets_Festivals">
+    <End Role="Festivals" Type="groep15_festivalsDataStore.Festival" Multiplicity="1" />
+    <End Role="Tickets" Type="groep15_festivalsDataStore.Ticket" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Festivals">
+        <PropertyRef Name="fest_id" />
+      </Principal>
+      <Dependent Role="Tickets">
+        <PropertyRef Name="fest_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tickets_GeregistreerdeGebruikers">
+    <End Role="GeregistreerdeGebruikers" Type="groep15_festivalsDataStore.GeregistreerdeGebruiker" Multiplicity="1" />
+    <End Role="Tickets" Type="groep15_festivalsDataStore.Ticket" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GeregistreerdeGebruikers">
+        <PropertyRef Name="gebr_id" />
+      </Principal>
+      <Dependent Role="Tickets">
+        <PropertyRef Name="gebr_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tickets_Tickettypes">
+    <End Role="Tickettypes" Type="groep15_festivalsDataStore.Tickettype" Multiplicity="1" />
+    <End Role="Tickets" Type="groep15_festivalsDataStore.Ticket" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tickettypes">
+        <PropertyRef Name="typ_id" />
+      </Principal>
+      <Dependent Role="Tickets">
+        <PropertyRef Name="typ_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TickettypesPerFestival_Festivals">
+    <End Role="Festivals" Type="groep15_festivalsDataStore.Festival" Multiplicity="1" />
+    <End Role="TickettypesPerFestival" Type="groep15_festivalsDataStore.TickettypesPerFestival" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Festivals">
+        <PropertyRef Name="fest_id" />
+      </Principal>
+      <Dependent Role="TickettypesPerFestival">
+        <PropertyRef Name="fest_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TickettypesPerFestival_Tickettypes">
+    <End Role="Tickettypes" Type="groep15_festivalsDataStore.Tickettype" Multiplicity="1" />
+    <End Role="TickettypesPerFestival" Type="groep15_festivalsDataStore.TickettypesPerFestival" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tickettypes">
+        <PropertyRef Name="typ_id" />
+      </Principal>
+      <Dependent Role="TickettypesPerFestival">
+        <PropertyRef Name="typ_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

@@ -15,8 +15,11 @@ namespace Festipedia.Admin
         {
             using (var db = new groep15_festivalsContext())
             {
-                bindAllUsers();
-                bindAllRoles();  
+                
+                if (!IsPostBack)
+                {
+                    bindAllUsers();
+                }
                 CheckRolesForSelectedUser();
             }
         }
@@ -32,13 +35,6 @@ namespace Festipedia.Admin
             MembershipUserCollection query = Membership.GetAllUsers();
             UserList.DataSource = query;
             UserList.DataBind();
-        }
-
-        protected void bindAllRoles()
-        {
-            String[] query = Roles.GetAllRoles();
-            UsersRoleList.DataSource = query.ToList();
-            UsersRoleList.DataBind();
         }
 
         protected void CheckRolesForSelectedUser()
