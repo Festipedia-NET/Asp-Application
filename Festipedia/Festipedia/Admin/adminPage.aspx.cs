@@ -15,10 +15,9 @@ namespace Festipedia.Admin
         {
             using (var db = new groep15_festivalsContext())
             {
-                bindAllUsers();
-                bindAllRoles();
-                String selectedUser = UserList.SelectedValue;
-                CheckRolesForSelectedUser(selectedUser);
+                String[] query = Roles.GetAllRoles();
+                RoleList.DataSource = query.ToList();
+                RoleList.DataBind();
             }
         }
 
@@ -28,41 +27,12 @@ namespace Festipedia.Admin
             Response.Redirect(continueUrl);
         }
 
-        protected void bindAllUsers()
+        protected void RoleList_SelectedIndexChanged(object sender, EventArgs e)
         {
-            MembershipUserCollection query = Membership.GetAllUsers();
-            UserList.DataSource = query;
-            UserList.DataBind();
-        }
-
-        protected void bindAllRoles()
-        {
-            String[] query = Roles.GetAllRoles();
-            UsersRoleList.DataSource = query.ToList();
-            UsersRoleList.DataBind();
-        }
-
-        protected void CheckRolesForSelectedUser(String selectedUser)
-        {
-            String[] selectedUsersRoles = Roles.GetRolesForUser(selectedUser);
-            for (int i = 0; i < UsersRoleList.Items.Count-1; i++ )
-            {
-                CheckBox roleCheckbox = UsersRoleList.Items[i].FindControl("RoleCheckBox") as CheckBox;
-                if(selectedUsersRoles.Contains(roleCheckbox.Text))
-                {
-                    roleCheckbox.Checked = true;
-                }
-                else
-                {
-                    roleCheckbox.Checked = false;
-                }
-            }
-        }
-
-        protected void UserList_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            String selectedUser = UserList.SelectedValue;
-            CheckRolesForSelectedUser(selectedUser);
+            String selectRole = RoleList.Text;
+            String[] allUsers = Roles.GetUsersInRole(selectRole);
+            UserRoleList.DataSource = allUsers.ToList();
+            UserRoleList.DataBind();
         }
 
     }
