@@ -798,3 +798,20 @@ text-align:left;
     margin-left:50px;
 
 }
+
+.check {
+    width:300px;
+}
+
+    .check input{
+        float:left;
+        margin-top:10px;
+    }
+
+    .check label {
+        float: left;
+        margin-top:5px;
+        margin-left:20px;
+        margin-right:20px;
+       
+    }

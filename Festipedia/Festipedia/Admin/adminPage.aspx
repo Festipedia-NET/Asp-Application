@@ -61,7 +61,7 @@
         <h3>Roles</h3>
         <asp:Repeater ID="UsersRoleList" runat="server">      
             <ItemTemplate>           
-                <asp:CheckBox runat="server" ID="RoleCheckBox" AutoPostBack="true" Text='<%# Container.DataItem %>' OnCheckedChanged="RoleCheckBox_CheckChanged" />
+                <asp:CheckBox runat="server" ID="RoleCheckBox" AutoPostBack="true" Text='<%# Container.DataItem %>' OnCheckedChanged="RoleCheckBox_CheckChanged" CssClass="check" />
             </ItemTemplate> 
         </asp:Repeater> 
 
