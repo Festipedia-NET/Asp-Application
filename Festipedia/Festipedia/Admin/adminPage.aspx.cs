@@ -16,9 +16,8 @@ namespace Festipedia.Admin
             using (var db = new groep15_festivalsContext())
             {
                 bindAllUsers();
-                bindAllRoles();
-                String selectedUser = UserList.SelectedValue;
-                CheckRolesForSelectedUser(selectedUser);
+                bindAllRoles();  
+                CheckRolesForSelectedUser();
             }
         }
 
@@ -42,8 +41,9 @@ namespace Festipedia.Admin
             UsersRoleList.DataBind();
         }
 
-        protected void CheckRolesForSelectedUser(String selectedUser)
+        protected void CheckRolesForSelectedUser()
         {
+            String selectedUser = UserList.SelectedValue;
             String[] selectedUsersRoles = Roles.GetRolesForUser(selectedUser);
             for (int i = 0; i < UsersRoleList.Items.Count-1; i++ )
             {
@@ -62,14 +62,10 @@ namespace Festipedia.Admin
         protected void UserList_SelectedIndexChanged(object sender, EventArgs e)
         {
             String selectedUser = UserList.SelectedValue;
-            CheckRolesForSelectedUser(selectedUser);
-        }
-
-        protected void ChangePassword_Click(object sender, EventArgs e)
-        {
-            String selectedUser = UserList.SelectedItem.Value;
-            MembershipUser member = Membership.GetUser(selectedUser);
-            member.ChangePassword(member.GetPassword(), PasswordChange.Text);
+            if (!IsPostBack)
+            {
+                CheckRolesForSelectedUser();
+            }
         }
 
     }
