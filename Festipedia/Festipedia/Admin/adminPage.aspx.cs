@@ -65,6 +65,13 @@ namespace Festipedia.Admin
             CheckRolesForSelectedUser(selectedUser);
         }
 
+        protected void ChangePassword_Click(object sender, EventArgs e)
+        {
+            String selectedUser = UserList.SelectedItem.Value;
+            MembershipUser member = Membership.GetUser(selectedUser);
+            member.ChangePassword(member.GetPassword(), PasswordChange.Text);
+        }
+
     }
 
 
