@@ -14,14 +14,12 @@ namespace Festipedia.Admin
         protected void Page_Load(object sender, EventArgs e)
         {
             using (var db = new groep15_festivalsContext())
-            {
-                
-                if (!IsPostBack)
-                {
+            {            
+                if (!IsPostBack){
                     bindAllUsers();
-                }
-                bindAllRoles();
-                CheckRolesForSelectedUser();
+                    bindAllRoles();
+                    CheckRolesForSelectedUser();
+                }              
             }
         }
 
@@ -54,12 +52,9 @@ namespace Festipedia.Admin
             for (int i = 0; i < UsersRoleList.Items.Count; i++ )
             {
                 CheckBox roleCheckbox = UsersRoleList.Items[i].FindControl("RoleCheckBox") as CheckBox;
-                if(selectedUsersRoles.Contains(roleCheckbox.Text))
-                {
+                if(selectedUsersRoles.Contains(roleCheckbox.Text)){
                     roleCheckbox.Checked = true;
-                }
-                else
-                {
+                }else{
                     roleCheckbox.Checked = false;
                 }
             }
@@ -82,20 +77,33 @@ namespace Festipedia.Admin
 
         protected void changeUser_Click(object sender, EventArgs e)
         {
-            try
-            {
                 String selectedUser = UserList.SelectedValue;
-                MembershipUser user = Membership.GetUser();
-                user.Email = EmailChange.Text;
+                MembershipUser user = Membership.GetUser(selectedUser);
+                String email = EmailChange.Text;
+                user.Email = email;
+
+                if (!String.IsNullOrEmpty(PasswordChange.Text))
+                {
+                    System.Diagnostics.Debug.WriteLine("Variable: " + PasswordChange.Text);
+                    user.ChangePassword(user.ResetPassword(), PasswordChange.Text);
+                }
+
                 Membership.UpdateUser(user);
-            }
-            catch (System.Configuration.Provider.ProviderException ex)
-            {
-                System.Diagnostics.Debug.WriteLine(ex.Message);
-            }
         }
 
+        protected void RoleCheckBox_CheckChanged(object sender, EventArgs e)
+        {
+            CheckBox RoleCheckBox = (CheckBox)sender;
+            string selectedUserName = UserList.SelectedValue;
+            string roleName = RoleCheckBox.Text;
+            if (RoleCheckBox.Checked)
+            {
+                Roles.AddUserToRole(selectedUserName, roleName);
+            }
+            else
+            {
+                Roles.RemoveUserFromRole(selectedUserName, roleName);
+            }
+        }
     }
-
-
 }

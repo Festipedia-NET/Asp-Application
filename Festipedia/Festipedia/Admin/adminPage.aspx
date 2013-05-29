@@ -47,13 +47,18 @@
         <h2>Manage user</h2>
         <asp:DropDownList class="dropList" id="UserList" runat="server" AutoPostBack="true" OnSelectedIndexChanged="UserList_SelectedIndexChanged"></asp:DropDownList><br /><br />
         <asp:Label ID="EmailLabel" runat="server" AssociatedControlID="EmailChange">E-mail:
-        <asp:RequiredFieldValidator ID="EmailRequired" runat="server" ControlToValidate="EmailChange" CssClass="field-validation-error" ErrorMessage="Required."></asp:RequiredFieldValidator>
+        <asp:RequiredFieldValidator ID="EmailRequired" runat="server" ControlToValidate="EmailChange" CssClass="field-validation-error" ErrorMessage="Required." ValidationGroup="emailChange"></asp:RequiredFieldValidator>
         </asp:Label>
         <asp:TextBox ID="EmailChange" runat="server"></asp:TextBox><br />
 
+        <asp:Label ID="PasswordLabel" runat="server" AssociatedControlID="PasswordChange">Password:
+        <asp:RequiredFieldValidator ID="PasswordRequired" runat="server" ControlToValidate="PasswordChange" CssClass="field-validation-error"
+            ErrorMessage="Required." ValidationGroup="passwordChange"></asp:RequiredFieldValidator></asp:Label>
+        <asp:TextBox ID="PasswordChange" runat="server" TextMode="Password"></asp:TextBox><br />
+
         <asp:Repeater ID="UsersRoleList" runat="server">      
             <ItemTemplate>           
-                <asp:CheckBox runat="server" ID="RoleCheckBox" AutoPostBack="true" Text='<%# Container.DataItem %>' />
+                <asp:CheckBox runat="server" ID="RoleCheckBox" AutoPostBack="true" Text='<%# Container.DataItem %>' OnCheckedChanged="RoleCheckBox_CheckChanged" />
             </ItemTemplate> 
         </asp:Repeater> 
         <asp:Button ID="changeUser" runat="server" Text="Change User" OnClick="changeUser_Click" />
