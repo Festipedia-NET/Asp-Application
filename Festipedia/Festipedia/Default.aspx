@@ -29,7 +29,7 @@
             <ItemTemplate>
                  <tr id="Tr1" runat="server">                       
                             <td>
-                              <a href ="#" ><%#: Item.fest_naam %> </a>
+                             <%#: Item.fest_naam %>
                             </td>
                             <td >
                              <%#: Item.fest_locatie %>
