@@ -546,6 +546,19 @@ input[type="checkbox"].input-validation-error {
 .validation-summary-valid {
     display: none;
 }
+/* Password strength
+----------------------------------------------------------*/
+
+.barBorder{
+    border: solid 1px red;
+    width: 300px;
+}
+.barInternal{
+    background: yellow;
+}
+.barInternalGreen{
+    background: green;
+}
 
 /* tables
 ----------------------------------------------------------*/
