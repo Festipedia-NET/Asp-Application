@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="Register" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="Festipedia.Account.Register" %>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
 
 <asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
     <hgroup class="title">
@@ -38,6 +39,14 @@
                                 <asp:TextBox runat="server" ID="Password" TextMode="Password" />
                                 <asp:RequiredFieldValidator runat="server" ControlToValidate="Password"
                                     CssClass="field-validation-error" ErrorMessage="The password field is required." />
+                                <cc1:PasswordStrength ID="Password_PasswordStrength" runat="server" Enabled="True"
+                                    TargetControlID="Password"
+                                    DisplayPosition="RightSide"
+                                    StrengthIndicatorType="BarIndicator"
+                                    BarBorderCssClass="barBorder"
+                                    BarIndicatorCssClass="barInternal"
+                                    StrengthStyles="barInternal;barInternalGreen">
+                                </cc1:PasswordStrength>
                             </li>
                             <li>
                                 <asp:Label runat="server" AssociatedControlID="ConfirmPassword">Confirm password</asp:Label>
