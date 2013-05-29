@@ -199,6 +199,7 @@
     <Content Include="Edit\add.aspx" />
     <Content Include="Edit\edit.aspx" />
     <Content Include="Edit\editPage.aspx" />
+    <Content Include="ErrorPage.aspx" />
     <Content Include="FestiDetail.aspx" />
     <Content Include="Festivals.aspx" />
     <Content Include="Images\accent.png" />
@@ -356,6 +357,13 @@
     </Compile>
     <Compile Include="Edit\editPage.aspx.designer.cs">
       <DependentUpon>editPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ErrorPage.aspx.cs">
+      <DependentUpon>ErrorPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ErrorPage.aspx.designer.cs">
+      <DependentUpon>ErrorPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="FestiDetail.aspx.cs">
       <DependentUpon>FestiDetail.aspx</DependentUpon>

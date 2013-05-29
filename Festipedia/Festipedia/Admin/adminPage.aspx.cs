@@ -11,10 +11,11 @@ namespace Festipedia.Admin
 {
     public partial class adminPage : System.Web.UI.Page
     {
+        protected string redirectUrl = "~/Admin/adminPage.aspx";
+
         protected void Page_Load(object sender, EventArgs e)
         {
-            using (var db = new groep15_festivalsContext())
-            {            
+            using (var db = new groep15_festivalsContext()){            
                 if (!IsPostBack){
                     bindAllUsers();
                     bindAllRoles();
@@ -25,8 +26,7 @@ namespace Festipedia.Admin
 
         protected void CreateUser_CreatedUser(object sender, EventArgs e)
         {
-            string continueUrl =  "~/Admin/adminPage.aspx";
-            Response.Redirect(continueUrl);
+            Response.Redirect(redirectUrl);
         }
 
         protected void bindAllUsers()
@@ -71,8 +71,8 @@ namespace Festipedia.Admin
         {
             String user = deleteUserList.SelectedValue;
             Membership.DeleteUser(user);
-            string continueUrl = "~/Admin/adminPage.aspx";
-            Response.Redirect(continueUrl);
+
+            Response.Redirect(redirectUrl);
         }
 
         protected void changeUser_Click(object sender, EventArgs e)
@@ -82,12 +82,9 @@ namespace Festipedia.Admin
                 String email = EmailChange.Text;
                 user.Email = email;
 
-                if (!String.IsNullOrEmpty(PasswordChange.Text))
-                {
-                    System.Diagnostics.Debug.WriteLine("Variable: " + PasswordChange.Text);
+                if (!String.IsNullOrEmpty(PasswordChange.Text)){
                     user.ChangePassword(user.ResetPassword(), PasswordChange.Text);
                 }
-
                 Membership.UpdateUser(user);
         }
 
@@ -96,12 +93,9 @@ namespace Festipedia.Admin
             CheckBox RoleCheckBox = (CheckBox)sender;
             string selectedUserName = UserList.SelectedValue;
             string roleName = RoleCheckBox.Text;
-            if (RoleCheckBox.Checked)
-            {
+            if (RoleCheckBox.Checked){
                 Roles.AddUserToRole(selectedUserName, roleName);
-            }
-            else
-            {
+            }else{
                 Roles.RemoveUserFromRole(selectedUserName, roleName);
             }
         }
