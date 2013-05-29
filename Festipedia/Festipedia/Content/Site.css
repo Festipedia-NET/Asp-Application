@@ -764,29 +764,33 @@ width: 300px !important;
 text-align:left;
 }
 
- .button {
-		background-color: #179f02;
+ .button, #MainContent_addUserWizard___CustomNav0_StepNextButtonButton {
+		background-color: #179f02 !important; 
 			
-		border: 1px solid #111111;
-		box-shadow: 0 1px 1px rgba(255, 255, 255, 0.1), 0 -1px 1px rgba(0, 0, 0, 0.2);
+		border: 1px solid #111111 !important;
+		box-shadow: 0 1px 1px rgba(255, 255, 255, 0.1), 0 -1px 1px rgba(0, 0, 0, 0.2) !important;
 		color: white !important;
 		display: inline-block;
-		margin: 3px 0 0;
-		padding: 4px 10px;
+		margin: 3px 0 0 !important;
+		padding: 4px 10px !important;
 		text-align: center;
 		text-decoration: none;
 		opacity: 0.9;
-		font: 13.3px/1.7 "Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
+		font: 13.3px/1.7 "Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif  !important;
 
 	}
 	
-	.button:hover {
+	.button:hover, #MainContent_addUserWizard___CustomNav0_StepNextButtonButton:hover {
 		cursor: pointer;
 		opacity: 1;
-		background-color: #1bca00;	
-		text-decoration: none;	
-        color: white;	
+		background-color: #1bca00 !important;	
+		text-decoration: none !important;
+        color: white !important;	
 	}
+
+#MainContent_addUserWizard___CustomNav0_StepNextButtonButton {
+    float:left;
+}
 
 .margbutton {
 
