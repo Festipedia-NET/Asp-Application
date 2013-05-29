@@ -40,7 +40,7 @@
             </WizardSteps>
         </asp:CreateUserWizard>
         <h2>Delete user</h2>
-        <asp:DropDownList class="dropList" id="deleteUserList" runat="server" AutoPostBack="true"></asp:DropDownList>
+        <asp:DropDownList class="dropList" id="deleteUserList" runat="server" AutoPostBack="true"></asp:DropDownList><br />
         <asp:Button ID="deleteUser" runat="server" Text="Delete User" OnClick="deleteUser_Click" />
     </section>
     <section class="contentRight">

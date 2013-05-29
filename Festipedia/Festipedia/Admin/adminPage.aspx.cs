@@ -36,6 +36,8 @@ namespace Festipedia.Admin
             MembershipUserCollection query = Membership.GetAllUsers();
             UserList.DataSource = query;
             UserList.DataBind();
+            deleteUserList.DataSource = query;
+            deleteUserList.DataBind();
         }
 
         protected void bindAllRoles()
@@ -73,6 +75,8 @@ namespace Festipedia.Admin
         {
             String user = deleteUserList.SelectedValue;
             Membership.DeleteUser(user);
+            string continueUrl = "~/Admin/adminPage.aspx";
+            Response.Redirect(continueUrl);
         }
 
     }
