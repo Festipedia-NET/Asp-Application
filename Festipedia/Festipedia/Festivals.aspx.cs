@@ -13,11 +13,16 @@ namespace Festipedia
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            using (var db = new groep15_festivalsContext())
+            try
             {
-                var query = from f in db.Festivals orderby f.fest_datum select f;
-                festView.DataSource = query.ToList();
-                festView.DataBind();                
+                using (var db = new groep15_festivalsContext())
+                {
+                    var query = from f in db.Festivals orderby f.fest_datum select f;
+                    festView.DataSource = query.ToList();
+                    festView.DataBind();
+                }
+            }catch(Exception ex){
+                Response.Redirect("~/errorPage.aspx");
             }
         }
     }

@@ -22,22 +22,22 @@ namespace Festipedia.Admin {
         protected global::System.Web.UI.WebControls.Label successLabel;
         
         /// <summary>
-        /// CreateUserWizard1 control.
+        /// addUserWizard control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CreateUserWizard CreateUserWizard1;
+        protected global::System.Web.UI.WebControls.CreateUserWizard addUserWizard;
         
         /// <summary>
-        /// CreateUserWizardStep1 control.
+        /// addUserWizardStep1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CreateUserWizardStep CreateUserWizardStep1;
+        protected global::System.Web.UI.WebControls.CreateUserWizardStep addUserWizardStep1;
         
         /// <summary>
         /// deleteUserList control.
@@ -103,13 +103,13 @@ namespace Festipedia.Admin {
         protected global::System.Web.UI.WebControls.Label PasswordLabel;
         
         /// <summary>
-        /// PasswordRequired control.
+        /// passwordMinLength control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator PasswordRequired;
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator passwordMinLength;
         
         /// <summary>
         /// PasswordChange control.
@@ -121,15 +121,6 @@ namespace Festipedia.Admin {
         protected global::System.Web.UI.WebControls.TextBox PasswordChange;
         
         /// <summary>
-        /// UsersRoleList control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater UsersRoleList;
-        
-        /// <summary>
         /// changeUser control.
         /// </summary>
         /// <remarks>
@@ -137,5 +128,14 @@ namespace Festipedia.Admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button changeUser;
+        
+        /// <summary>
+        /// UsersRoleList control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater UsersRoleList;
     }
 }

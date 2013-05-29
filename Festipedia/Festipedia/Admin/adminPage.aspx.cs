@@ -24,11 +24,19 @@ namespace Festipedia.Admin
             }
         }
 
+        /// <summary>
+        /// redirect naar de admin pagina als een user is aangemaakt.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void CreateUser_CreatedUser(object sender, EventArgs e)
         {
             Response.Redirect(redirectUrl);
         }
 
+        /// <summary>
+        /// Vult de dropdown lists met alle users
+        /// </summary>
         protected void bindAllUsers()
         {
             MembershipUserCollection query = Membership.GetAllUsers();
@@ -38,6 +46,9 @@ namespace Festipedia.Admin
             deleteUserList.DataBind();
         }
 
+        /// <summary>
+        /// Haal alle roles op en toont die met checkboxes.
+        /// </summary>
         protected void bindAllRoles()
         {
             String[] query = Roles.GetAllRoles();
@@ -45,6 +56,9 @@ namespace Festipedia.Admin
             UsersRoleList.DataBind();
         }
 
+        /// <summary>
+        /// Vinkt de checkboxen aan als de geselecteerde user tot die role behoort
+        /// </summary>
         protected void CheckRolesForSelectedUser()
         {
             String selectedUser = UserList.SelectedValue;
@@ -62,11 +76,21 @@ namespace Festipedia.Admin
             EmailChange.Text = user.Email;
         }
 
+        /// <summary>
+        /// Roept bevenstaande functie op als een nieuwe gebruiker gekozen is.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void UserList_SelectedIndexChanged(object sender, EventArgs e)
         {
             CheckRolesForSelectedUser();
         }
 
+        /// <summary>
+        /// Verwijderen van de geselecteerde gebruiker
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void deleteUser_Click(object sender, EventArgs e)
         {
             String user = deleteUserList.SelectedValue;
@@ -75,19 +99,37 @@ namespace Festipedia.Admin
             Response.Redirect(redirectUrl);
         }
 
+        /// <summary>
+        /// Update het wachtwoord en het emailadres van de gebruiker
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void changeUser_Click(object sender, EventArgs e)
         {
+            try
+            {
                 String selectedUser = UserList.SelectedValue;
                 MembershipUser user = Membership.GetUser(selectedUser);
                 String email = EmailChange.Text;
                 user.Email = email;
 
-                if (!String.IsNullOrEmpty(PasswordChange.Text)){
+                if (!String.IsNullOrEmpty(PasswordChange.Text))
+                {
                     user.ChangePassword(user.ResetPassword(), PasswordChange.Text);
                 }
                 Membership.UpdateUser(user);
+            }
+            catch (System.Configuration.Provider.ProviderException ex)
+            {
+                Response.Redirect("~/errorPage.aspx");
+            }
         }
 
+        /// <summary>
+        /// update de roles van de user als er worden aangevinkt
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void RoleCheckBox_CheckChanged(object sender, EventArgs e)
         {
             CheckBox RoleCheckBox = (CheckBox)sender;
