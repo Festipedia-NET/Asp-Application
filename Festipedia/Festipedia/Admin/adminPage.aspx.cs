@@ -20,6 +20,7 @@ namespace Festipedia.Admin
                 {
                     bindAllUsers();
                 }
+                bindAllRoles();
                 CheckRolesForSelectedUser();
             }
         }
@@ -35,6 +36,13 @@ namespace Festipedia.Admin
             MembershipUserCollection query = Membership.GetAllUsers();
             UserList.DataSource = query;
             UserList.DataBind();
+        }
+
+        protected void bindAllRoles()
+        {
+            String[] query = Roles.GetAllRoles();
+            UsersRoleList.DataSource = query.ToList();
+            UsersRoleList.DataBind();
         }
 
         protected void CheckRolesForSelectedUser()
@@ -59,6 +67,12 @@ namespace Festipedia.Admin
         protected void UserList_SelectedIndexChanged(object sender, EventArgs e)
         {
             CheckRolesForSelectedUser();
+        }
+
+        protected void deleteUser_Click(object sender, EventArgs e)
+        {
+            String user = deleteUserList.SelectedValue;
+            Membership.DeleteUser(user);
         }
 
     }
