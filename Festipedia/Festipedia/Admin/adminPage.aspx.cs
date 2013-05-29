@@ -57,13 +57,14 @@ namespace Festipedia.Admin
                 if(selectedUsersRoles.Contains(roleCheckbox.Text))
                 {
                     roleCheckbox.Checked = true;
-                    System.Diagnostics.Debug.WriteLine("Variabele: User: " + selectedUser + " Role: " + roleCheckbox.Text);
                 }
                 else
                 {
                     roleCheckbox.Checked = false;
                 }
             }
+            var user = Membership.GetUser(selectedUser);
+            EmailChange.Text = user.Email;
         }
 
         protected void UserList_SelectedIndexChanged(object sender, EventArgs e)
@@ -77,6 +78,21 @@ namespace Festipedia.Admin
             Membership.DeleteUser(user);
             string continueUrl = "~/Admin/adminPage.aspx";
             Response.Redirect(continueUrl);
+        }
+
+        protected void changeUser_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                String selectedUser = UserList.SelectedValue;
+                MembershipUser user = Membership.GetUser();
+                user.Email = EmailChange.Text;
+                Membership.UpdateUser(user);
+            }
+            catch (System.Configuration.Provider.ProviderException ex)
+            {
+                System.Diagnostics.Debug.WriteLine(ex.Message);
+            }
         }
 
     }
